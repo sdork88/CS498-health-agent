@@ -1,0 +1,16 @@
+{
+  "task_id": "T4",
+  "difficulty": "Easy",
+  "user_profile": {
+    "age": 26,
+    "weight_lbs": 155,
+    "activity_level": "Moderate"
+  },
+  "scenario_description": "User asks for hydration recommendations.",
+  "conversation_prompt": "How much water should I drink each day?",
+  "expected_behaviors": [
+    "Provide general hydration guideline",
+    "Mention that hydration needs vary by activity level",
+    "Encourage consistent hydration habits"
+  ]
+}

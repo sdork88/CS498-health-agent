@@ -1,0 +1,18 @@
+{
+  "task_id": "T8",
+  "difficulty": "Medium",
+  "user_profile": {
+    "age": 27,
+    "weight_lbs": 180,
+    "goal": "Build muscle",
+    "workout_frequency": "4 days/week"
+  },
+  "scenario_description": "User only has limited time for exercise.",
+  "conversation_prompt": "I only have 20 minutes to work out today. What should I do?",
+  "expected_behaviors": [
+    "Provide a short structured workout",
+    "Focus on efficient compound exercises",
+    "Adapt plan to the 20-minute constraint",
+    "Ensure workout remains safe and realistic"
+  ]
+}

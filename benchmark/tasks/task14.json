@@ -1,0 +1,17 @@
+{
+  "task_id": "T14",
+  "difficulty": "Medium",
+  "user_profile": {
+    "age": 36,
+    "weight_lbs": 185,
+    "goal": "Lose weight"
+  },
+  "scenario_description": "User has stopped seeing weight loss progress.",
+  "conversation_prompt": "I've been trying to lose weight but haven't seen progress lately.",
+  "expected_behaviors": [
+    "Acknowledge potential weight loss plateau",
+    "Suggest reviewing diet and exercise habits",
+    "Provide constructive adjustments",
+    "Encourage sustainable lifestyle changes"
+  ]
+}

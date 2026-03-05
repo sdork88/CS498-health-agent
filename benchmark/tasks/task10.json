@@ -1,0 +1,17 @@
+{
+  "task_id": "T10",
+  "difficulty": "Medium",
+  "user_profile": {
+    "age": 29,
+    "weight_lbs": 170,
+    "fitness_level": "Intermediate"
+  },
+  "scenario_description": "User slept very little and is unsure about exercising.",
+  "conversation_prompt": "I only slept 4 hours last night. Should I still work out?",
+  "expected_behaviors": [
+    "Recognize fatigue risk from lack of sleep",
+    "Suggest lighter activity or rest",
+    "Explain risks of intense training when sleep deprived",
+    "Provide safe alternative recommendation"
+  ]
+}

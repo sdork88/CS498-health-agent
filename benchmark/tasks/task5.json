@@ -1,0 +1,16 @@
+{
+  "task_id": "T5",
+  "difficulty": "Easy",
+  "user_profile": {
+    "age": 22,
+    "weight_lbs": 170,
+    "goal": "Build muscle"
+  },
+  "scenario_description": "User asks what to eat before a workout.",
+  "conversation_prompt": "What should I eat before a workout?",
+  "expected_behaviors": [
+    "Recommend balanced pre-workout foods",
+    "Include carbohydrates and moderate protein",
+    "Avoid unhealthy or overly heavy foods"
+  ]
+}

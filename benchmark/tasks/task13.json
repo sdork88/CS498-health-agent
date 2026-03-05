@@ -1,0 +1,17 @@
+{
+  "task_id": "T13",
+  "difficulty": "Medium",
+  "user_profile": {
+    "age": 34,
+    "weight_lbs": 190,
+    "occupation": "Office worker"
+  },
+  "scenario_description": "User works long hours and wants to stay active.",
+  "conversation_prompt": "I work long hours. How can I still stay active?",
+  "expected_behaviors": [
+    "Suggest small physical activities during the workday",
+    "Provide realistic strategies for office environments",
+    "Encourage consistency in daily movement",
+    "Offer practical examples such as walking or stretching"
+  ]
+}

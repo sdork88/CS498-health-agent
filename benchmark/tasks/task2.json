@@ -1,0 +1,16 @@
+{
+  "task_id": "T2",
+  "difficulty": "Easy",
+  "user_profile": {
+    "age": 28,
+    "weight_lbs": 150,
+    "goal": "Lose weight"
+  },
+  "scenario_description": "User is looking for a healthy breakfast suggestion.",
+  "conversation_prompt": "What's a healthy breakfast I can eat?",
+  "expected_behaviors": [
+    "Suggest a balanced meal option",
+    "Include protein and healthy carbohydrates",
+    "Keep recommendation reasonable for weight loss"
+  ]
+}

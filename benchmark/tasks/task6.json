@@ -1,0 +1,16 @@
+{
+  "task_id": "T6",
+  "difficulty": "Easy",
+  "user_profile": {
+    "age": 35,
+    "weight_lbs": 175,
+    "workout_frequency": "4 days/week"
+  },
+  "scenario_description": "User wants advice for rest days.",
+  "conversation_prompt": "What should I do on my rest days?",
+  "expected_behaviors": [
+    "Suggest recovery strategies",
+    "Mention light activity or stretching",
+    "Explain importance of recovery"
+  ]
+}

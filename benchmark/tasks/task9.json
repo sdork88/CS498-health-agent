@@ -1,0 +1,18 @@
+{
+  "task_id": "T9",
+  "difficulty": "Medium",
+  "user_profile": {
+    "age": 32,
+    "weight_lbs": 145,
+    "goal": "Lose weight",
+    "diet": "Vegetarian"
+  },
+  "scenario_description": "User wants a dinner suggestion aligned with their diet and goals.",
+  "conversation_prompt": "What should I eat for dinner if I'm trying to lose weight?",
+  "expected_behaviors": [
+    "Provide vegetarian meal suggestion",
+    "Ensure balanced nutrition",
+    "Align recommendation with weight-loss goal",
+    "Explain why the meal supports the goal"
+  ]
+}

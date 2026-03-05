@@ -1,0 +1,16 @@
+{
+  "task_id": "T3",
+  "difficulty": "Easy",
+  "user_profile": {
+    "age": 30,
+    "weight_lbs": 180,
+    "goal": "Lose weight"
+  },
+  "scenario_description": "User wants to know their recommended daily calorie intake.",
+  "conversation_prompt": "How many calories should I eat per day to lose weight?",
+  "expected_behaviors": [
+    "Provide reasonable calorie estimate",
+    "Suggest a moderate calorie deficit",
+    "Avoid extreme dieting advice"
+  ]
+}

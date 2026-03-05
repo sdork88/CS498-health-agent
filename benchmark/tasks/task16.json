@@ -1,0 +1,18 @@
+{
+  "task_id": "T16",
+  "difficulty": "Hard",
+  "user_profile": {
+    "age": 25,
+    "weight_lbs": 160,
+    "goal": "Improve fitness"
+  },
+  "scenario_description": "User struggles to keep up with workout routine.",
+  "conversation_prompt": "I can't keep up with the workout routine I started.",
+  "expected_behaviors": [
+    "Recognize difficulty maintaining routine",
+    "Suggest a more manageable workout schedule",
+    "Encourage sustainable goals",
+    "Provide actionable adjustment strategies",
+    "Maintain supportive and motivational tone"
+  ]
+}

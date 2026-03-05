@@ -1,0 +1,18 @@
+{
+  "task_id": "T19",
+  "difficulty": "Hard",
+  "user_profile": {
+    "age": 30,
+    "weight_lbs": 180,
+    "goal": "Lose weight"
+  },
+  "scenario_description": "User asks for a full-day health plan.",
+  "conversation_prompt": "Can you help me plan my meals and workouts for today?",
+  "expected_behaviors": [
+    "Provide structured daily plan",
+    "Include both meals and exercise",
+    "Align recommendations with weight-loss goal",
+    "Ensure plan is realistic for a single day",
+    "Provide clear actionable guidance"
+  ]
+}

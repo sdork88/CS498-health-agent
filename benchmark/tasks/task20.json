@@ -1,0 +1,18 @@
+{
+  "task_id": "T20",
+  "difficulty": "Hard",
+  "user_profile": {
+    "age": 26,
+    "weight_lbs": 165,
+    "goal": "Improve fitness"
+  },
+  "scenario_description": "User feels discouraged about skipping workouts.",
+  "conversation_prompt": "I keep skipping workouts and feel discouraged.",
+  "expected_behaviors": [
+    "Acknowledge user's frustration",
+    "Provide motivational encouragement",
+    "Suggest achievable short-term goals",
+    "Offer practical strategies to improve consistency",
+    "Maintain supportive coaching tone"
+  ]
+}

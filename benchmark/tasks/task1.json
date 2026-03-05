@@ -1,0 +1,18 @@
+{
+  "task_id": "T1",
+  "difficulty": "Easy",
+  "user_profile": {
+    "age": 24,
+    "height": "5'10",
+    "weight_lbs": 165,
+    "fitness_level": "Beginner",
+    "goal": "Build muscle"
+  },
+  "scenario_description": "User is new to the gym and wants guidance for their first workout.",
+  "conversation_prompt": "I just started going to the gym. Can you suggest a workout for today?",
+  "expected_behaviors": [
+    "Provide beginner-friendly workout routine",
+    "Include multiple major muscle groups",
+    "Avoid overly intense or advanced exercises"
+  ]
+}

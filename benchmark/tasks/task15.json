@@ -1,0 +1,21 @@
+{
+  "task_id": "T15",
+  "difficulty": "Hard",
+  "user_profile": {
+    "age": 28,
+    "weight_lbs": 175,
+    "goal": "Stay active"
+  },
+  "scenario_description": "User previously mentioned knee pain when running.",
+  "conversation_prompt": [
+    "My knee hurts when I run.",
+    "Can you make a leg workout plan for today?"
+  ],
+  "expected_behaviors": [
+    "Recall previous knee pain context",
+    "Avoid exercises that strain the knee",
+    "Suggest safe alternative exercises",
+    "Provide structured leg workout plan",
+    "Explain reasoning for injury-safe choices"
+  ]
+}

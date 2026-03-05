@@ -1,0 +1,16 @@
+{
+  "task_id": "T7",
+  "difficulty": "Easy",
+  "user_profile": {
+    "age": 40,
+    "weight_lbs": 200,
+    "fitness_level": "Beginner"
+  },
+  "scenario_description": "User asks for beginner cardio options.",
+  "conversation_prompt": "What's a good cardio workout for beginners?",
+  "expected_behaviors": [
+    "Suggest beginner-friendly cardio exercises",
+    "Recommend moderate duration or intensity",
+    "Avoid high-impact or overly strenuous options"
+  ]
+}

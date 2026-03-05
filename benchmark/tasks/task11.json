@@ -1,0 +1,17 @@
+{
+  "task_id": "T11",
+  "difficulty": "Medium",
+  "user_profile": {
+    "age": 24,
+    "weight_lbs": 160,
+    "goal": "Build muscle"
+  },
+  "scenario_description": "User wants daily nutrition guidance for muscle gain.",
+  "conversation_prompt": "What should I eat today if I'm trying to build muscle?",
+  "expected_behaviors": [
+    "Recommend high-protein foods",
+    "Encourage balanced meals throughout the day",
+    "Align suggestions with muscle gain goal",
+    "Provide example meals or foods"
+  ]
+}

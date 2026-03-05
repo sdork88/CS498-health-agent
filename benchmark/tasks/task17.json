@@ -1,0 +1,19 @@
+{
+  "task_id": "T17",
+  "difficulty": "Hard",
+  "user_profile": {
+    "age": 33,
+    "starting_weight_lbs": 190,
+    "current_weight_lbs": 182,
+    "goal": "Lose weight"
+  },
+  "scenario_description": "User wants to evaluate progress after one month.",
+  "conversation_prompt": "I've been working out for a month. Am I making good progress?",
+  "expected_behaviors": [
+    "Interpret weight change correctly",
+    "Assess whether progress is reasonable",
+    "Provide constructive feedback",
+    "Encourage continued healthy habits",
+    "Suggest potential next steps"
+  ]
+}
