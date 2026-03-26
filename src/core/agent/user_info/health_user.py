@@ -10,12 +10,14 @@ class HealthUserInfoField(Enum):
 
 class HealthUser(UserInfo):
     """Represents a user with health attributes, built on UserInfo."""
-    def __init__(self, name: str = "", email: str = "", age: int = None, weight: float = None, height: float = None, medical_conditions: List[str] = None, allergies: List[str] = None):
+    def __init__(self, name: str = "", email: str = "", age: int = None, weight: float = None, height: float = None, medical_conditions: List[str] = None, allergies: List[str] = None, sex: str = None, fitness_goal: str = None):
         super().__init__(name, email, age)
         self.weight = weight
         self.height = height
         self.medical_conditions = medical_conditions or []
         self.allergies = allergies or []
+        self.sex = sex
+        self.fitness_goal = fitness_goal
 
     def update_field(self, field, value):
         if isinstance(field, UserInfoField):

@@ -33,7 +33,7 @@ class HealthMemoryTool:
     def _get(self, field):
         value = getattr(self.user, field, None)
         if value is None and field not in ("name", "email", "age", "weight", "height",
-                                           "medical_conditions", "allergies"):
+                                           "medical_conditions", "allergies", "sex", "fitness_goal"):
             return {"error": f"Unknown field: {field}"}
         return {"field": field, "value": value}
 
@@ -47,7 +47,7 @@ class HealthMemoryTool:
                 self.user.age = int(value)
             elif field in ("medical_conditions","allergies"):
                 setattr(self.user, field, value if isinstance(value, list) else [value])
-            elif field in ("name","email"):
+            elif field in ("name", "email", "sex", "fitness_goal"):
                 setattr(self.user, field, str(value))
             else:
                 return {"error": f"Unknown field: {field}"}

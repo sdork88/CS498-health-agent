@@ -1,11 +1,13 @@
 from core.agent.models import Agent
 from core.agent.user_info.health_user import HealthUser
 from tools.health_memory import HealthMemoryTool
+from tools.fitness_recommender import FitnessRecommender
 from tools.definitions import get_all_schemas, DEFAULT_HEALTH_DOMAINS
 
 LABEL_UPDATED = "Updated profile"
 LABEL_RETRIEVED = "Retrieved profile"
 LABEL_SEARCH = "Searching verified sources"
+LABEL_KNN = "Finding similar users"
 
 
 class HealthAgent(Agent):
@@ -27,15 +29,16 @@ class HealthAgent(Agent):
             return (
                 f"{base} Current user profile: {profile_str}. "
                 "Use health_memory to save any health details the user mentions. "
+                "Use fitness_recommender to find similar users and reference their plans. "
                 "Use web search to find verified health information when needed."
             )
         return (
             f"{base} Use health_memory to save health details as the user shares them. "
+            "Use fitness_recommender to find similar users and reference their plans. "
             "Use web search to find verified health information when needed."
         )
 
     def context_for(self, observation):
-        """Prepend any agent-specific context before handing off to the orchestrator."""
         health_data = self.health_memory.execute({"action": "get_all"})
         return f"[User health profile: {health_data}]\n\n{observation}"
 
@@ -57,6 +60,21 @@ class HealthAgent(Agent):
             field = block.input.get("field", "profile")
             print(f"\n  [{label}: {field}]", flush=True)
             return {"type": "tool_result", "tool_use_id": block.id, "content": str(result)}
+
+        if btype == "tool_use" and name == "fitness_recommender":
+            print(f"\n  [{LABEL_KNN}...]", flush=True)
+            recommender = FitnessRecommender.get()
+            if recommender:
+                neighbours = recommender.recommend(block.input)
+                content = "\n".join(
+                    f"{i+1}. [{n['fitness_type']} / {n['fitness_goal']}] "
+                    f"Exercises: {n['exercises']}. Equipment: {n['equipment']}. "
+                    f"Diet: {n['diet']}. Recommendation: {n['recommendation'][:300]}…"
+                    for i, n in enumerate(neighbours)
+                )
+            else:
+                content = "Fitness recommender model not loaded."
+            return {"type": "tool_result", "tool_use_id": block.id, "content": content}
 
         if btype in ("server_tool_use", "tool_use") and name == "web_search":
             print(f"\n  [{LABEL_SEARCH}...]", flush=True)
