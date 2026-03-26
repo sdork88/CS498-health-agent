@@ -1,19 +1,65 @@
+from core.agent.models import Agent
+from core.agent.user_info.health_user import HealthUser
+from tools.health_memory import HealthMemoryTool
+from tools.definitions import get_all_schemas, DEFAULT_HEALTH_DOMAINS
 
+LABEL_UPDATED = "Updated profile"
+LABEL_RETRIEVED = "Retrieved profile"
+LABEL_SEARCH = "Searching verified sources"
 
-from .models import Agent, HealthUserInfoField
 
 class HealthAgent(Agent):
-    """Agent specialized for health users."""
-    def __init__(self, name: str):
+    """Health-specific agent. Owns its system message, tools, and tool dispatch."""
+
+    def __init__(self, name, allowed_domains=None):
         super().__init__(name)
+        user = HealthUser(name=name)
+        self.user_info = user
+        self.health_memory = HealthMemoryTool(user)
+        self.tools = get_all_schemas(allowed_domains=allowed_domains or DEFAULT_HEALTH_DOMAINS)
 
-    def call(self, observation):
-        # Implement health-specific call logic here
-        pass
+    @property
+    def system_message(self):
+        profile = self.health_memory.execute({"action": "get_all"})
+        profile_str = ", ".join(f"{k}: {v}" for k, v in profile.items() if v)
+        base = "You are a supportive health and fitness coach."
+        if profile_str:
+            return (
+                f"{base} Current user profile: {profile_str}. "
+                "Use health_memory to save any health details the user mentions. "
+                "Use web search to find verified health information when needed."
+            )
+        return (
+            f"{base} Use health_memory to save health details as the user shares them. "
+            "Use web search to find verified health information when needed."
+        )
 
-    def use_tool(self, tool_name, tool_input):
-        # Implement health-specific tool usage here
-        pass
+    def context_for(self, observation):
+        """Prepend any agent-specific context before handing off to the orchestrator."""
+        health_data = self.health_memory.execute({"action": "get_all"})
+        return f"[User health profile: {health_data}]\n\n{observation}"
 
-    def update_user_memory(self, field: HealthUserInfoField, new_value):
-        super().update_user_memory(field, new_value)
+    def display_citations(self, citations):
+        if citations:
+            print("\n  Sources:")
+            for title, url in citations:
+                print(f"    - {title or url}: {url}", flush=True)
+
+    def dispatch_tool(self, block):
+        """Execute a tool_use block. Returns a tool_result dict, or None if unhandled."""
+        name = getattr(block, "name", None)
+        btype = getattr(block, "type", None)
+
+        if btype == "tool_use" and name == "health_memory":
+            result = self.health_memory.execute(block.input)
+            action = block.input.get("action", "")
+            label = LABEL_UPDATED if action == "set" else LABEL_RETRIEVED
+            field = block.input.get("field", "profile")
+            print(f"\n  [{label}: {field}]", flush=True)
+            return {"type": "tool_result", "tool_use_id": block.id, "content": str(result)}
+
+        if btype in ("server_tool_use", "tool_use") and name == "web_search":
+            print(f"\n  [{LABEL_SEARCH}...]", flush=True)
+            return None  # handled server-side
+
+        return None

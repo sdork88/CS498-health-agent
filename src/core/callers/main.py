@@ -1,27 +1,63 @@
 import os
+from dotenv import load_dotenv
 from anthropic import Anthropic
 from .models import BaseCaller
 
+load_dotenv()
+
 
 class ClaudeCaller(BaseCaller):
-    def __init__(self, system_message, model="claude-3-5-sonnet-20241022", max_tokens=1024, temperature=0.7, agent=None):
-        super().__init__(system_message, model, max_tokens, temperature, agent=agent)
-        self.client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    """Single-turn streaming caller. No loop, no tool logic — just talks to Claude."""
 
-    def call(self, user_input):
-        # Add user input to agent's conversation if agent is provided
-        if self.agent:
-            self.agent.conversation.add_message("user", user_input)
-        response = self.client.messages.create(
+    def __init__(self, system_message, model="claude-sonnet-4-6", max_tokens=16000,
+                 thinking_budget=3000, tools=None):
+        super().__init__(system_message, model, max_tokens)
+        self.thinking_budget = thinking_budget
+        self.client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+        self.tools = tools or []
+
+    def call(self, messages):
+        """Stream one turn. Returns dict with text, thinking, citations, stop_reason, content."""
+        kwargs = dict(
             model=self.model,
             max_tokens=self.max_tokens,
-            temperature=self.temperature,
+            thinking={"type": "enabled", "budget_tokens": self.thinking_budget},
             system=self.system_message,
-            messages=[
-                {"role": "user", "content": user_input}
-            ]
+            messages=messages,
         )
-        # Add response to agent's conversation
-        if self.agent:
-            self.agent.conversation.add_message("assistant", response.content[0].text)
-        return response.content[0].text
+        if self.tools:
+            kwargs["tools"] = self.tools
+
+        text = ""
+        thinking = ""
+        citations = []
+
+        with self.client.messages.stream(**kwargs) as stream:
+            for event in stream:
+                etype = getattr(event, "type", None)
+
+                if etype == "content_block_delta":
+                    delta = event.delta
+                    if delta.type == "text_delta":
+                        print(delta.text, end="", flush=True)
+                        text += delta.text
+                    elif delta.type == "thinking_delta":
+                        thinking += delta.thinking
+
+            final = stream.get_final_message()
+
+        for block in final.content:
+            if getattr(block, "type", None) == "text":
+                for cite in getattr(block, "citations", []) or []:
+                    url = getattr(cite, "url", "")
+                    title = getattr(cite, "title", "")
+                    if url and (title, url) not in citations:
+                        citations.append((title, url))
+
+        return {
+            "text": text,
+            "thinking": thinking,
+            "citations": citations,
+            "stop_reason": final.stop_reason,
+            "content": final.content,
+        }
