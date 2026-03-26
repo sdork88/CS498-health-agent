@@ -16,7 +16,7 @@ class ClaudeCaller(BaseCaller):
         self.client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
         self.tools = tools or []
 
-    def call(self, messages):
+    def call(self, messages,silent=False):
         """Stream one turn. Returns dict with text, thinking, citations, stop_reason, content."""
         kwargs = dict(
             model=self.model,
@@ -39,7 +39,8 @@ class ClaudeCaller(BaseCaller):
                 if etype == "content_block_delta":
                     delta = event.delta
                     if delta.type == "text_delta":
-                        print(delta.text, end="", flush=True)
+                        if not silent:
+                            print(delta.text, end="", flush=True)
                         text += delta.text
                     elif delta.type == "thinking_delta":
                         thinking += delta.thinking
