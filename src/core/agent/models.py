@@ -1,8 +1,7 @@
-
 from enum import Enum, auto
 from typing import List, Dict, Any
-from .user_info.models import UserInfo, UserInfoField
-from .user_info.health_user import HealthUser, HealthUserInfoField
+from core.agent.user_info.models import UserInfo, UserInfoField
+from core.agent.user_info.health_user import HealthUser, HealthUserInfoField
 
 class ConversationModel:
     """Stores and manages conversation history for the agent."""

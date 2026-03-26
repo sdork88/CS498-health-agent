@@ -1,6 +1,6 @@
 from enum import Enum, auto
 from typing import List
-from .models import UserInfo, UserInfoField
+from core.agent.user_info.models import UserInfo, UserInfoField
 
 class HealthUserInfoField(Enum):
     WEIGHT = auto()
