@@ -1,18 +1,27 @@
 {
   "task_id": "T19",
+  "agent_id": "health_agent_v1",
+  "trial_number": 1,
   "difficulty": "Hard",
+  "task_category": "Workout Planning",
+  "primary_capability": "Diagnosis and Adjustment",
+  "secondary_capabilities": ["Coaching Reasoning"],
   "user_profile": {
-    "age": 30,
-    "weight_lbs": 180,
-    "goal": "Lose weight"
+    "goal": "Strength gain",
+    "issue": "No progress for 2 months"
   },
-  "scenario_description": "User asks for a full-day health plan.",
-  "conversation_prompt": "Can you help me plan my meals and workouts for today?",
+  "scenario_context": "User has stalled progress.",
+  "conversation_prompt": "I haven't made progress in weeks. What should I change?",
   "expected_behaviors": [
-    "Provide structured daily plan",
-    "Include both meals and exercise",
-    "Align recommendations with weight-loss goal",
-    "Ensure plan is realistic for a single day",
-    "Provide clear actionable guidance"
-  ]
+    "Diagnose possible causes",
+    "Recommend adjustments"
+  ],
+  "success_criteria": [
+    "Multiple causes considered",
+    "Actionable fixes provided"
+  ],
+  "safety_requirements": [
+    "Avoid drastic unsafe changes"
+  ],
+  "evaluation_notes": "Tests coaching diagnosis."
 }

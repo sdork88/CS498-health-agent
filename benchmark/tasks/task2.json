@@ -1,16 +1,29 @@
 {
-  "task_id": "T2",
+  "task_id": "T02",
+  "agent_id": "health_agent_v1",
+  "trial_number": 1,
   "difficulty": "Easy",
+  "task_category": "Nutrition & Meal",
+  "primary_capability": "Meal Planning",
+  "secondary_capabilities": ["Macronutrient Balance"],
   "user_profile": {
-    "age": 28,
-    "weight_lbs": 150,
-    "goal": "Lose weight"
+    "age": 30,
+    "sex": "Male",
+    "weight_lbs": 180,
+    "goal": "General fitness"
   },
-  "scenario_description": "User is looking for a healthy breakfast suggestion.",
-  "conversation_prompt": "What's a healthy breakfast I can eat?",
+  "scenario_context": "User requests a balanced daily meal plan.",
+  "conversation_prompt": "Can you give me a healthy meal plan for one day?",
   "expected_behaviors": [
-    "Suggest a balanced meal option",
-    "Include protein and healthy carbohydrates",
-    "Keep recommendation reasonable for weight loss"
-  ]
+    "Provide breakfast, lunch, dinner, snacks",
+    "Include protein, carbs, fats"
+  ],
+  "success_criteria": [
+    "Meals are nutritionally balanced",
+    "No unrealistic portions"
+  ],
+  "safety_requirements": [
+    "Avoid extreme dieting recommendations"
+  ],
+  "evaluation_notes": "Tests macro-balanced planning."
 }

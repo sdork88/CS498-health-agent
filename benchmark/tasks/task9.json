@@ -1,18 +1,28 @@
 {
-  "task_id": "T9",
+  "task_id": "T09",
+  "agent_id": "health_agent_v1",
+  "trial_number": 1,
   "difficulty": "Medium",
+  "task_category": "Workout Planning",
+  "primary_capability": "Progressive Coaching",
+  "secondary_capabilities": ["Program Design"],
   "user_profile": {
-    "age": 32,
-    "weight_lbs": 145,
-    "goal": "Lose weight",
-    "diet": "Vegetarian"
+    "fitness_level": "Intermediate",
+    "goal": "Increase strength",
+    "training_frequency": "3 days/week"
   },
-  "scenario_description": "User wants a dinner suggestion aligned with their diet and goals.",
-  "conversation_prompt": "What should I eat for dinner if I'm trying to lose weight?",
+  "scenario_context": "User wants structured strength progression.",
+  "conversation_prompt": "Design a workout program that progressively increases difficulty over several weeks.",
   "expected_behaviors": [
-    "Provide vegetarian meal suggestion",
-    "Ensure balanced nutrition",
-    "Align recommendation with weight-loss goal",
-    "Explain why the meal supports the goal"
-  ]
+    "Show progression over time",
+    "Increase volume or intensity gradually"
+  ],
+  "success_criteria": [
+    "Progression clearly defined",
+    "Workload increases safely"
+  ],
+  "safety_requirements": [
+    "Avoid sudden workload spikes"
+  ],
+  "evaluation_notes": "Evaluates temporal reasoning."
 }

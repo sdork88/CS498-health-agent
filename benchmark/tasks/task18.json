@@ -1,18 +1,27 @@
 {
   "task_id": "T18",
+  "agent_id": "health_agent_v1",
+  "trial_number": 1,
   "difficulty": "Hard",
+  "task_category": "Goal Setting",
+  "primary_capability": "Context Retention",
+  "secondary_capabilities": ["Adaptive Coaching"],
   "user_profile": {
-    "age": 29,
-    "weight_lbs": 170,
-    "workout_frequency": "Daily"
+    "goal": "Weight loss"
   },
-  "scenario_description": "User reports fatigue but continues exercising daily.",
-  "conversation_prompt": "I've been exhausted but I keep working out every day.",
+  "scenario_context": "Five-turn evolving conversation with new allergy introduced.",
+  "conversation_prompt": "Multi-turn dialogue evaluating adaptation and consistency.",
   "expected_behaviors": [
-    "Recognize potential overtraining",
-    "Explain risks of insufficient recovery",
-    "Recommend rest or reduced training volume",
-    "Suggest recovery strategies",
-    "Prioritize long-term health and safety"
-  ]
+    "Remember prior context",
+    "Adjust recommendations after allergy update",
+    "Evaluate progress numerically"
+  ],
+  "success_criteria": [
+    "No shellfish after allergy introduced",
+    "Consistent recommendations maintained"
+  ],
+  "safety_requirements": [
+    "Avoid contradicting earlier advice"
+  ],
+  "evaluation_notes": "Tests conversational memory."
 }
