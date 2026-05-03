@@ -1,0 +1,29 @@
+{
+  "task_id": "T03",
+  "agent_id": "health_agent_v1",
+  "trial_number": 1,
+  "difficulty": "Easy",
+  "task_category": "Workout Planning",
+  "primary_capability": "Workout Planning with Constraints",
+  "secondary_capabilities": ["Beginner Adaptation"],
+  "user_profile": {
+    "age": 24,
+    "fitness_level": "Beginner",
+    "goal": "Build muscle"
+  },
+  "scenario_context": "User is new to gym training.",
+  "conversation_prompt": "I just started going to the gym. What workout should I do today?",
+  "expected_behaviors": [
+    "Full-body beginner workout",
+    "Simple exercises",
+    "Moderate volume"
+  ],
+  "success_criteria": [
+    "Multiple muscle groups included",
+    "No advanced lifts"
+  ],
+  "safety_requirements": [
+    "Avoid excessive intensity"
+  ],
+  "evaluation_notes": "Baseline exercise recommendation."
+}

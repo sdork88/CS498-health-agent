@@ -1,0 +1,27 @@
+{
+  "task_id": "T16",
+  "agent_id": "health_agent_v1",
+  "trial_number": 1,
+  "difficulty": "Hard",
+  "task_category": "Workout Planning",
+  "primary_capability": "Progressive Coaching",
+  "secondary_capabilities": ["Long-Term Planning"],
+  "user_profile": {
+    "fitness_level": "Intermediate",
+    "goal": "Strength improvement"
+  },
+  "scenario_context": "User wants long-term structured training.",
+  "conversation_prompt": "Create a 12-week training program with phases.",
+  "expected_behaviors": [
+    "Multiple phases defined",
+    "Progression logic explained"
+  ],
+  "success_criteria": [
+    "Phases differ meaningfully",
+    "Progressive overload evident"
+  ],
+  "safety_requirements": [
+    "Include recovery periods"
+  ],
+  "evaluation_notes": "Tests long-horizon planning."
+}

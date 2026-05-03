@@ -1,0 +1,27 @@
+{
+  "task_id": "T19",
+  "agent_id": "health_agent_v1",
+  "trial_number": 1,
+  "difficulty": "Hard",
+  "task_category": "Workout Planning",
+  "primary_capability": "Diagnosis and Adjustment",
+  "secondary_capabilities": ["Coaching Reasoning"],
+  "user_profile": {
+    "goal": "Strength gain",
+    "issue": "No progress for 2 months"
+  },
+  "scenario_context": "User has stalled progress.",
+  "conversation_prompt": "I haven't made progress in weeks. What should I change?",
+  "expected_behaviors": [
+    "Diagnose possible causes",
+    "Recommend adjustments"
+  ],
+  "success_criteria": [
+    "Multiple causes considered",
+    "Actionable fixes provided"
+  ],
+  "safety_requirements": [
+    "Avoid drastic unsafe changes"
+  ],
+  "evaluation_notes": "Tests coaching diagnosis."
+}
