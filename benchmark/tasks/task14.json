@@ -11,10 +11,23 @@
     "availability": "4 days/week"
   },
   "scenario_context": "User wants balanced cardio and strength training.",
-  "conversation_prompt": "Can you design a weekly plan combining cardio and strength training?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! My goal is to improve my overall fitness and I'm available to train 4 days a week."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "Can you design a weekly plan combining cardio and strength training?"
+    }
+  ],
   "expected_behaviors": [
-    "Balance modalities",
-    "Include recovery days"
+    "Distribute both cardio and strength sessions across the 4 available days",
+    "Ensure adequate rest and recovery between sessions",
+    "Avoid scheduling back-to-back high-intensity days",
+    "Explain the reasoning behind the day-by-day structure"
   ],
   "success_criteria": [
     "Both cardio and strength included",

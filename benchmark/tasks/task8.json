@@ -14,11 +14,23 @@
     "goal": "Lose weight"
   },
   "scenario_context": "User wants a structured weekly plan supporting fat loss.",
-  "conversation_prompt": "Can you create a 7-day meal plan to help me lose weight safely?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm a 34-year-old female, 5'5\", 175 lbs, and my goal is to lose weight safely."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "Can you create a 7-day meal plan to help me lose weight safely?"
+    }
+  ],
   "expected_behaviors": [
-    "Provide meals across 7 days",
-    "Maintain caloric deficit",
-    "Include balanced macronutrients"
+    "Provide a structured meal plan covering all 7 days",
+    "Maintain a safe caloric deficit appropriate for the user's profile",
+    "Include balanced macronutrients across each day",
+    "Avoid repetitive or monotonous meals across the week"
   ],
   "success_criteria": [
     "Plan spans full 7 days",

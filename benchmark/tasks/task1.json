@@ -15,7 +15,18 @@
     "goal": "Lose weight"
   },
   "scenario_context": "User wants to know daily calorie needs.",
-  "conversation_prompt": "How many calories should I eat each day to lose weight?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm a 26-year-old female, 5'6\", 150 lbs, and I'd describe myself as lightly active. My goal is to lose weight."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "How many calories should I eat each day to lose weight?"
+    }
+  ],
   "expected_behaviors": [
     "Estimate TDEE using user profile",
     "Provide caloric deficit recommendation",

@@ -11,10 +11,24 @@
     "issue": "No progress for 2 months"
   },
   "scenario_context": "User has stalled progress.",
-  "conversation_prompt": "I haven't made progress in weeks. What should I change?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! My goal is strength gain but I've been stuck with no progress for about 2 months now."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "I haven't made progress in weeks. What should I change?"
+    }
+  ],
   "expected_behaviors": [
-    "Diagnose possible causes",
-    "Recommend adjustments"
+    "Identify multiple plausible causes of strength plateau",
+    "Assess training variables such as volume, intensity, and frequency as potential factors",
+    "Consider non-training factors such as sleep, nutrition, and stress as contributors",
+    "Provide specific actionable adjustments to break the plateau",
+    "Avoid recommending drastic or unsafe program overhauls"
   ],
   "success_criteria": [
     "Multiple causes considered",

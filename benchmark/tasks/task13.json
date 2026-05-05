@@ -11,10 +11,23 @@
     "training_type": "Strength training"
   },
   "scenario_context": "User asks about recovery nutrition.",
-  "conversation_prompt": "What should I eat after workouts and when should I eat it?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I do strength training and my main focus right now is optimizing muscle recovery."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "What should I eat after workouts and when should I eat it?"
+    }
+  ],
   "expected_behaviors": [
-    "Suggest protein and carbohydrates",
-    "Provide timing guidance"
+    "Recommend a post-workout meal combining protein and carbohydrates",
+    "Specify an evidence-based timing window for post-workout nutrition",
+    "Explain why each macronutrient supports recovery after strength training",
+    "Avoid overstating the necessity of supplements for recovery"
   ],
   "success_criteria": [
     "Timing window mentioned",

@@ -12,10 +12,23 @@
     "training_frequency": "3 days/week"
   },
   "scenario_context": "User wants structured strength progression.",
-  "conversation_prompt": "Design a workout program that progressively increases difficulty over several weeks.",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm at an intermediate fitness level, I train 3 days a week, and my goal is to increase my strength."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "Design a workout program that progressively increases difficulty over several weeks."
+    }
+  ],
   "expected_behaviors": [
-    "Show progression over time",
-    "Increase volume or intensity gradually"
+    "Structure the program across multiple weeks with clear phases",
+    "Demonstrate progressive overload through increasing volume or intensity",
+    "Respect the 3 days/week training frequency throughout",
+    "Include specific exercises appropriate for intermediate level"
   ],
   "success_criteria": [
     "Progression clearly defined",

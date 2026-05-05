@@ -10,10 +10,24 @@
     "conditions": ["Type 2 diabetes", "Hypertension"]
   },
   "scenario_context": "User requires diet satisfying multiple health constraints.",
-  "conversation_prompt": "Can you suggest a diet that works for both diabetes and high blood pressure?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I have two health conditions I need to manage: Type 2 diabetes and hypertension."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "Can you suggest a diet that works for both diabetes and high blood pressure?"
+    }
+  ],
   "expected_behaviors": [
-    "Address both conditions",
-    "Recommend balanced foods"
+    "Address dietary requirements for Type 2 diabetes explicitly",
+    "Address dietary requirements for hypertension explicitly",
+    "Identify foods that satisfy both conditions simultaneously",
+    "Emphasize low sodium intake for blood pressure management",
+    "Recommend physician or dietitian consultation given the medical complexity"
   ],
   "success_criteria": [
     "Low sodium emphasized",

@@ -11,10 +11,22 @@
     "goal": "Increase activity"
   },
   "scenario_context": "User wants realistic step goals.",
-  "conversation_prompt": "How many steps should I aim for each day?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm currently averaging about 4,000 steps a day and I want to increase my overall activity level."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "How many steps should I aim for each day?"
+    }
+  ],
   "expected_behaviors": [
-    "Provide gradual increase",
-    "Explain progression"
+    "Anchor recommendation to the 4,000 step baseline",
+    "Suggest a gradual step increase with a clear target",
+    "Explain why the progression is safe and sustainable"
   ],
   "success_criteria": [
     "Goal scaled from baseline",
