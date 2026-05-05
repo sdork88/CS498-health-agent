@@ -12,11 +12,22 @@
     "goal": "Build muscle"
   },
   "scenario_context": "User is new to gym training.",
-  "conversation_prompt": "I just started going to the gym. What workout should I do today?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm 24 years old, a complete beginner at the gym, and my goal is to build muscle."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "I just started going to the gym. What workout should I do today?"
+    }
+  ],
   "expected_behaviors": [
-    "Full-body beginner workout",
-    "Simple exercises",
-    "Moderate volume"
+    "Recommend a full-body beginner workout",
+    "Use simple, accessible exercises only",
+    "Keep volume and intensity at a beginner-appropriate level"
   ],
   "success_criteria": [
     "Multiple muscle groups included",

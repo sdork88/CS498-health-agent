@@ -11,10 +11,23 @@
     "goal": "Healthy eating"
   },
   "scenario_context": "User needs meal substitutions removing allergens.",
-  "conversation_prompt": "I’m allergic to nuts. Can you modify a healthy meal plan so it’s safe for me?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I have a tree nut allergy and my goal is just to eat healthily overall."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "I'm allergic to nuts. Can you modify a healthy meal plan so it's safe for me?"
+    }
+  ],
   "expected_behaviors": [
-    "Remove allergen entirely",
-    "Provide safe alternatives"
+    "Remove all tree nut ingredients from the meal plan",
+    "Provide nutritionally equivalent safe substitutions",
+    "Maintain overall diet quality after substitutions are applied",
+    "Flag any hidden or commonly overlooked sources of tree nuts"
   ],
   "success_criteria": [
     "No nut-containing foods present",

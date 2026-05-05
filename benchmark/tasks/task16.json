@@ -11,10 +11,24 @@
     "goal": "Strength improvement"
   },
   "scenario_context": "User wants long-term structured training.",
-  "conversation_prompt": "Create a 12-week training program with phases.",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm at an intermediate fitness level and my goal is to improve my strength over the long term."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "Create a 12-week training program with phases."
+    }
+  ],
   "expected_behaviors": [
-    "Multiple phases defined",
-    "Progression logic explained"
+    "Divide the 12 weeks into distinct training phases with different goals",
+    "Explain the progression logic between each phase",
+    "Apply progressive overload within each phase through volume or intensity",
+    "Include planned deload or recovery periods to prevent overtraining",
+    "Tailor exercise selection and difficulty to an intermediate fitness level"
   ],
   "success_criteria": [
     "Phases differ meaningfully",

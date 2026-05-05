@@ -11,9 +11,22 @@
     "activity_level": "Moderate"
   },
   "scenario_context": "User asks hydration needs.",
-  "conversation_prompt": "How much water should I drink daily?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I weigh 170 lbs and I'm moderately active."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "How much water should I drink daily?"
+    }
+  ],
   "expected_behaviors": [
-    "Weight-based hydration estimate"
+    "Base hydration estimate on body weight",
+    "Adjust recommendation upward for moderate activity level",
+    "Provide a concrete numeric daily range"
   ],
   "success_criteria": [
     "Numeric range provided",

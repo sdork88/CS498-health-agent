@@ -10,11 +10,44 @@
     "goal": "Weight loss"
   },
   "scenario_context": "Five-turn evolving conversation with new allergy introduced.",
-  "conversation_prompt": "Multi-turn dialogue evaluating adaptation and consistency.",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! My goal is weight loss."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "I want to lose weight. Can you give me a weekly meal plan?"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "message": "Can you add more protein sources, especially seafood?"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "message": "How many calories should I be targeting per day to hit my goal in 3 months?"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "message": "Actually, I just found out I have a shellfish allergy. Please update the plan."
+    },
+    {
+      "turn": 5,
+      "role": "user",
+      "message": "Can you summarize the full updated plan and check it's still on track for my goal?"
+    }
+  ],
   "expected_behaviors": [
-    "Remember prior context",
-    "Adjust recommendations after allergy update",
-    "Evaluate progress numerically"
+    "Retain and apply the weight loss goal consistently across all turns",
+    "Incorporate seafood protein sources when requested in turn 2",
+    "Provide a specific numeric calorie target aligned with the 3-month timeline in turn 3",
+    "Remove all shellfish immediately and completely after the allergy is introduced in turn 4",
+    "Deliver a coherent summary in turn 5 that reflects all prior updates without contradiction"
   ],
   "success_criteria": [
     "No shellfish after allergy introduced",

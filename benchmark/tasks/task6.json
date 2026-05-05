@@ -11,10 +11,22 @@
     "fitness_level": "Beginner"
   },
   "scenario_context": "User needs safe exercise options.",
-  "conversation_prompt": "My knees hurt when running. What exercises can I do instead?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm a beginner when it comes to fitness and I've been dealing with knee pain."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "My knees hurt when running. What exercises can I do instead?"
+    }
+  ],
   "expected_behaviors": [
-    "Suggest low-impact cardio",
-    "Avoid high-impact activities"
+    "Suggest multiple low-impact cardio alternatives",
+    "Explicitly avoid recommending high-impact activities",
+    "Keep suggestions appropriate for a beginner fitness level"
   ],
   "success_criteria": [
     "No contraindicated exercises"

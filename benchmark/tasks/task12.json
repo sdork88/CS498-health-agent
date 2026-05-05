@@ -12,10 +12,23 @@
     "fitness_level": "Intermediate"
   },
   "scenario_context": "User has competing goals.",
-  "conversation_prompt": "I want to lose fat but also build muscle. How should I approach this?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm at an intermediate fitness level and I have two goals I'm trying to balance: losing fat and building muscle at the same time."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "I want to lose fat but also build muscle. How should I approach this?"
+    }
+  ],
   "expected_behaviors": [
-    "Explain recomposition strategy",
-    "Balance goals realistically"
+    "Explain the concept of body recomposition and when it is achievable",
+    "Acknowledge the inherent tradeoff between fat loss and muscle gain",
+    "Provide a realistic, actionable strategy balancing both goals",
+    "Set appropriate expectations given the user's intermediate fitness level"
   ],
   "success_criteria": [
     "Tradeoffs acknowledged",

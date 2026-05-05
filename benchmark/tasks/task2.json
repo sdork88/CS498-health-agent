@@ -13,10 +13,22 @@
     "goal": "General fitness"
   },
   "scenario_context": "User requests a balanced daily meal plan.",
-  "conversation_prompt": "Can you give me a healthy meal plan for one day?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm a 30-year-old male, 180 lbs, and my goal is general fitness."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "Can you give me a healthy meal plan for one day?"
+    }
+  ],
   "expected_behaviors": [
-    "Provide breakfast, lunch, dinner, snacks",
-    "Include protein, carbs, fats"
+    "Provide breakfast, lunch, dinner, and snacks",
+    "Include balanced macronutrients across meals",
+    "Portion sizes appropriate for body weight and goal"
   ],
   "success_criteria": [
     "Meals are nutritionally balanced",

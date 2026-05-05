@@ -14,10 +14,22 @@
     "goal": "Build muscle"
   },
   "scenario_context": "User asks protein intake target.",
-  "conversation_prompt": "How much protein should I eat daily?",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm a 28-year-old male, 180 lbs, and I lift weights 3 times a week. My goal is to build muscle."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "How much protein should I eat daily?"
+    }
+  ],
   "expected_behaviors": [
-    "Convert lbs to kg",
-    "Provide evidence-based range"
+    "Convert body weight from lbs to kg",
+    "Apply evidence-based protein range of 1.6–2.2 g/kg/day",
+    "Provide a concrete numeric daily protein target in grams"
   ],
   "success_criteria": [
     "Protein target within 1.6–2.2 g/kg/day",

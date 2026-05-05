@@ -14,11 +14,23 @@
     "injury": "Mild L4-L5 disc herniation"
   },
   "scenario_context": "User wants to maintain strength without aggravating injury.",
-  "conversation_prompt": "Create a 4-week strength plan that maintains upper-body strength without stressing my back.",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "user",
+      "message": "Hi! I'm a 35-year-old female, 145 lbs, intermediate fitness level, and I have a mild L4-L5 disc herniation."
+    },
+    {
+      "turn": 1,
+      "role": "user",
+      "message": "Create a 4-week strength plan that maintains upper-body strength without stressing my back."
+    }
+  ],
   "expected_behaviors": [
-    "Avoid spinal loading exercises",
-    "Provide substitutions",
-    "Include progression"
+    "Avoid all spinal loading and axial compression exercises",
+    "Provide safe upper-body substitutions that work around the injury",
+    "Structure the plan across 4 weeks with clear progression",
+    "Include a safety disclaimer recommending physician or physio clearance"
   ],
   "success_criteria": [
     "No contraindicated exercises",
