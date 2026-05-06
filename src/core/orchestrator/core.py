@@ -43,7 +43,17 @@ class OrchestrateAgent:
                 r for block in result["content"]
                 if (r := self.agent.dispatch_tool(block)) is not None
             ]
-            messages.append({"role": "assistant", "content": result["content"]})
+            # If no client-side results (only server tools like web_search fired),
+            # don't append anything — empty tool_results causes a 400 on the next call.
+            if not tool_results:
+                break
+            # Strip server-handled tool_use blocks before replaying in history —
+            # they have no client-side result and cause a 400 if included.
+            client_content = [
+                b for b in result["content"]
+                if getattr(b, "type", None) != "server_tool_use"
+            ]
+            messages.append({"role": "assistant", "content": client_content})
             messages.append({"role": "user", "content": tool_results})
 
         # --- KNN injection (after tool-use so profile is up to date) ---
