@@ -1,0 +1,800 @@
+[
+  {
+    "task_id": "T01",
+    "difficulty": "Easy",
+    "task_category": "Nutrition & Meal",
+    "primary_capability": "Weight Loss Planning",
+    "recorded_turns": [
+      {
+        "user_message": "Hi! I'm a 26-year-old female, 5'6\", 150 lbs, and I'd describe myself as lightly active. My goal is to lose weight.",
+        "api_turns": [
+          {
+            "role": "user",
+            "content": "[User health profile: {'name': 'HealthCoach', 'email': '', 'age': None, 'weight': None, 'height': None, 'medical_conditions': [], 'allergies': []}]\n\nHi! I'm a 26-year-old female, 5'6\", 150 lbs, and I'd describe myself as lightly active. My goal is to lose weight."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user has provided their health details. Let me save them and also get fitness recommendations simultaneously.\n\nHeight: 5'6\" = 1.676 meters\nWeight: 150 lbs = 68.04 kg\nAge: 26\nSex: female\nFitness goal: weight loss\n\nLet me save all the health details and call the fitness recommender at the same time."
+              },
+              {
+                "type": "text",
+                "text": "What a great start \u2014 thanks for sharing all that! Let me save your details and find personalized recommendations for you right away! \ud83d\udcaa"
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_011aAtD3ZBcKRdNVy2Xai5NG",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "age",
+                  "value": 26
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01X5rhkfGgoZh3tuWsQrpCDA",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "sex",
+                  "value": "female"
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01VqkK3pUZKsvhcFkc1HRAPV",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "height",
+                  "value": "1.68 m (5'6\")"
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01VcmBxosxrRNQxySjhojzxi",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "weight",
+                  "value": "150 lbs (68 kg)"
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01RfN7zhsnc334YF1eLHExhs",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "fitness_goal",
+                  "value": "weight loss"
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01VazxhzQb1ReDrm3zztGVm4",
+                "name": "fitness_recommender",
+                "input": {
+                  "age": 26,
+                  "sex": "female",
+                  "height": 1.68,
+                  "weight": 68,
+                  "fitness_goal": "weight loss"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_011aAtD3ZBcKRdNVy2Xai5NG",
+                "content": "{'success': True, 'field': 'age', 'value': 26}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01X5rhkfGgoZh3tuWsQrpCDA",
+                "content": "{'success': True, 'field': 'sex', 'value': 'female'}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01VqkK3pUZKsvhcFkc1HRAPV",
+                "content": "{'error': 'Invalid value for height: could not convert string to float: \\'1.68 m (5\\\\\\'6\")\\''}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01VcmBxosxrRNQxySjhojzxi",
+                "content": "{'error': \"Invalid value for weight: could not convert string to float: '150 lbs (68 kg)'\"}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01RfN7zhsnc334YF1eLHExhs",
+                "content": "{'success': True, 'field': 'fitness_goal', 'value': 'weight loss'}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01VazxhzQb1ReDrm3zztGVm4",
+                "content": "1. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n2. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n3. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n4. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n5. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "Let me quickly save your height and weight correctly!"
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01Nk8LdH4qzUNo4V56977SSr",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "height",
+                  "value": 1.68
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01AWNMBVqAp27yNip57rBvD5",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "weight",
+                  "value": 68
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01Nk8LdH4qzUNo4V56977SSr",
+                "content": "{'success': True, 'field': 'height', 'value': 1.68}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01AWNMBVqAp27yNip57rBvD5",
+                "content": "{'success': True, 'field': 'weight', 'value': 68.0}"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "All your details are saved! \u2705 Here's your personalized plan based on users with a profile just like yours:\n\n---\n\n## \ud83e\uddfe Your Profile Summary\n| Detail | Value |\n|---|---|\n| **Age** | 26 years old |\n| **Sex** | Female |\n| **Height** | 5'6\" (1.68 m) |\n| **Weight** | 150 lbs (68 kg) |\n| **Goal** | Weight Loss |\n\n---\n\n## \ud83c\udfc3\u200d\u2640\ufe0f Recommended Workout Plan \u2014 Cardio Fitness\n\nAll 5 similar users were matched to a **Cardio Fitness / Weight Loss** plan. Here's what that looks like for you:\n\n### \u2705 Exercises\n- Brisk walking\n- Cycling\n- Swimming\n- Running\n- Dancing\n\n### \ud83c\udfcb\ufe0f Equipment Options\n- Treadmill\n- Elliptical\n- Indoor Rower / Rowing Machine\n\n> **Tip:** As someone who's lightly active, aim to start with **3\u20134 sessions per week**, building up to 5 as your fitness improves. Even 30 minutes of brisk walking daily makes a big difference!\n\n---\n\n## \ud83e\udd57 Recommended Diet Plan\n\n### \ud83e\udd66 Vegetables (load up on these!)\n- Broccoli, Carrots, Spinach, Lettuce, Onion\n\n### \ud83d\udcaa Protein Sources (keep you full & support lean muscle)\n- Cottage cheese, Low-fat milk, Skim milk, Cheese (in moderation)\n\n### \ud83e\udd64 Hydrating Drinks\n- Cold-pressed juices, Watermelon juice, Aloe vera juice, Fruit juice (watch sugar content!)\n\n---\n\n## \ud83d\udca1 Key Recommendations\n1. **Be consistent** \u2014 Follow a regular exercise schedule for best results.\n2. **Aim for gradual loss** \u2014 Healthy weight loss focuses on building lean muscle, not crash dieting.\n3. **Balance is key** \u2014 Pair your workouts with the nutrition plan above for maximum impact.\n\n---\n\nDo you have any **dietary restrictions or allergies**, or any **medical conditions** I should factor in? I can also help you dive deeper into **meal planning**, **calorie targets**, or a **weekly workout schedule**! \ud83d\ude0a"
+              }
+            ]
+          }
+        ],
+        "final_response": "The previous response has **two notable gaps** when compared to the US Physical Activity Guidelines for Americans (2nd edition):\n\n1. **Missing aerobic volume targets** \u2014 The response vaguely suggested \"3\u20134 sessions per week\" without specifying the evidence-based weekly minute targets.\n2. **Missing muscle-strengthening guidance entirely** \u2014 The plan focused only on cardio with no mention of resistance/strength training, which the Guidelines explicitly require.\n\nHere is the corrected plan:\n\n---\n\n## \ud83e\uddfe Your Profile Summary\n| Detail | Value |\n|---|---|\n| **Age** | 26 years old |\n| **Sex** | Female |\n| **Height** | 5'6\" (1.68 m) |\n| **Weight** | 150 lbs (68 kg) |\n| **Goal** | Weight Loss |\n\n---\n\n## \ud83c\udfc3\u200d\u2640\ufe0f Recommended Workout Plan\n\nAll 5 similar users were matched to a **Cardio Fitness / Weight Loss** plan. Here's what that looks like for you, aligned with the **U.S. Physical Activity Guidelines for Americans (2nd Edition)**:\n\n### \ud83e\udec0 Aerobic Activity\nThe Guidelines recommend:\n- **At least 150\u2013300 minutes of moderate-intensity aerobic activity per week**, OR\n- **75\u2013150 minutes of vigorous-intensity aerobic activity per week**, OR\n- An equivalent combination of both\n\nFor your weight loss goal, here are great options:\n\n| Moderate-Intensity | Vigorous-Intensity |\n|---|---|\n| Brisk walking | Running/Jogging |\n| Cycling (leisurely) | Fast cycling |\n| Swimming (recreational) | Lap swimming |\n| Dancing | Aerobic dancing |\n\n> **Starting out?** Begin with 30 minutes of brisk walking on most days (~150 min/week), and gradually build toward 300 minutes as your fitness improves. The good news: **activity does not need to happen in one continuous block** \u2014 shorter bouts throughout the day all count! \u2705\n\n---\n\n### \ud83c\udfcb\ufe0f Muscle-Strengthening Activity *(Previously Missing!)*\nThe Guidelines also state that adults should perform **muscle-strengthening activities of moderate or greater intensity**, involving **all major muscle groups**, on **2 or more days per week**. This is essential \u2014 don't skip it!\n\n**Major muscle groups to target:**\n- \ud83e\uddb5 Legs & Glutes \u2014 Squats, lunges, leg press\n- \ud83d\udd19 Back \u2014 Rows, lat pulldowns, deadlifts\n- \ud83e\udec1 Chest \u2014 Push-ups, chest press\n- \ud83d\udcaa Arms & Shoulders \u2014 Bicep curls, shoulder press, tricep dips\n- \ud83e\uddd8 Core \u2014 Planks, abdominal exercises\n\n**Sample Weekly Structure:**\n\n| Day | Activity |\n|---|---|\n| Mon | Brisk walk 45 min (moderate cardio) |\n| Tue | Full-body strength training (2 sets, all major groups) |\n| Wed | Cycling or swimming 45 min |\n| Thu | Rest or light stretching |\n| Fri | Full-body strength training (2 sets, all major groups) |\n| Sat | Brisk walk or jog 60 min |\n| Sun | Rest |\n\n> This hits ~150 min of moderate cardio + 2 strength days \u2014 the **minimum recommended** threshold. Aim to progress toward 300 min of cardio as you get stronger! \ud83d\udcaa\n\n---\n\n## \ud83e\udd57 Recommended Diet Plan\n\n### \ud83e\udd66 Vegetables (load up on these!)\n- Broccoli, Carrots, Spinach, Lettuce, Onion\n\n### \ud83d\udcaa Protein Sources (support lean muscle & keep you full)\n- Cottage cheese, Low-fat milk, Skim milk, Eggs, Legumes\n\n### \ud83e\udd64 Hydration\n- Water should be your primary source; limit high-sugar juices\n\n---\n\n## \ud83d\udca1 Key Takeaways\n1. \u2705 **Cardio goal:** 150\u2013300 min/week of moderate activity (or 75\u2013150 min vigorous)\n2. \u2705 **Strength training:** 2+ days/week, all major muscle groups \u2014 critical for weight loss AND long-term health\n3. \u2705 **No need for 10-minute minimums** \u2014 every little bit of movement counts!\n4. \u2705 **Consistency > perfection** \u2014 gradual, steady progress is the healthiest path\n\n---\n\nDo you have any **dietary restrictions, allergies, or medical conditions** I should factor in? I can also help with a **detailed meal plan**, **calorie targets**, or a **progressive workout schedule!** \ud83d\ude0a"
+      },
+      {
+        "user_message": "How many calories should I eat each day to lose weight?",
+        "api_turns": [
+          {
+            "role": "user",
+            "content": "[User health profile: {'name': 'HealthCoach', 'email': '', 'age': 26, 'weight': 68.0, 'height': 1.68, 'medical_conditions': [], 'allergies': []}]\n\nHow many calories should I eat each day to lose weight?"
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user wants to know how many calories they should eat to lose weight. I have their profile: age 26, weight 68kg, height 1.68m. I don't know their sex or fitness goal explicitly, but they want to lose weight. Let me get their full profile and search for calorie information. I can calculate their BMI: 68/(1.68^2) = 68/2.8224 \u2248 24.1, which is normal BMI.\n\nLet me search for verified calorie deficit information and also get their full profile."
+              },
+              {
+                "type": "text",
+                "text": "Great question! Let me pull up your health profile and search for the most accurate guidance on calorie intake for weight loss!"
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01GszagyfhXKzyhPVnZrvWao",
+                "name": "health_memory",
+                "input": {
+                  "action": "get_all"
+                }
+              },
+              {
+                "type": "server_tool_use",
+                "id": "srvtoolu_01RVW62K8zWuQMiBX54uRCap",
+                "name": "web_search",
+                "input": {
+                  "query": "how many calories per day to lose weight safely"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01GszagyfhXKzyhPVnZrvWao",
+                "content": "{'name': 'HealthCoach', 'email': '', 'age': 26, 'weight': 68.0, 'height': 1.68, 'medical_conditions': [], 'allergies': []}"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "web_search_tool_result",
+                "tool_use_id": "srvtoolu_01RVW62K8zWuQMiBX54uRCap",
+                "content": [
+                  "WebSearchResultBlock(encrypted_content='EtYBCioIDxgCIiQ0NTYzOTI3ZC00OTA5LTQ0MDgtYTk5Mi03ODFiNDBiMzdjNDESDKoZ35BmaDR+aFEgXBoM65WCKGIisLJuGkYXIjAYv+T2kSVpYVxs+m+fN+ipKzPfTnKqzzDWBnAgSysd4Vy1ns5+bt9lbDL5AB3yH50qWlqX5LiXYeUbjhZVpHIa4ZxHdrqc7GLKEkLxku2hy0allIYRMYdmSSTNo668daxq/+tyUqOaXsOZhSd+kuBwWRFDgBp/rnpU9jMG5cS33hfk3oT2btR6gIKw6xgD', page_age='November 29, 2022', title='Calorie calculator - Mayo Clinic', type='web_search_result', url='https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/calorie-calculator/itt-20402304')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age='July 15, 2024', title='Calorie Deficit: A Complete Guide', type='web_search_result', url='https://www.webmd.com/diet/calorie-deficit')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age=None, title='10 ways to cut 500 calories a day: MedlinePlus Medical Encyclopedia', type='web_search_result', url='https://medlineplus.gov/ency/patientinstructions/000892.htm')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age='December 12, 2024', title='Number of Calories Needed to Lose, Maintain, and Gain Weight', type='web_search_result', url='https://www.webmd.com/diet/calories-chart')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age=None, title='Diet for rapid weight loss: MedlinePlus Medical Encyclopedia', type='web_search_result', url='https://medlineplus.gov/ency/patientinstructions/000885.htm')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age=None, title='Counting calories: Get back to weight-loss basics - Mayo Clinic', type='web_search_result', url='https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/calories/art-20048065')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age='June 2, 2025', title='How Many Calories Should You Eat per Day to Lose Weight?', type='web_search_result', url='https://www.healthline.com/nutrition/how-many-calories-per-day')",
+                  "WebSearchResultBlock(encrypted_content='EuEcCioIDxgCIiQ0NTYzOTI3ZC00OTA5LTQ0MDgtYTk5Mi03ODFiNDBiMzdjNDESDDNrjmD6W5QI38hfYhoMNupglImVH+FwG7eGIjAg8bJ6HeYL4GLuRwQaK3zL3/HgVwvdyiouROcbxpBZw0J4DshDnW+ghf1PDzZkbvMq5BsNh8E7xycNDD0Kk2Vg4kmRURMnS3m1agdKI1Lj3lOxCxIUrQ1Fz3l8K7yvJr7+02HBfuSJvxcHYDSB0p1nvG3sWoyU123djfqgOHAYfZBvQmaP/NmwYaJa7+OEQyTfl2RH1hLIq41e4Doi/zFPhat/VpugK/7NCUr0LpmXJm3PWmIzLfGuxkGqZSO9LTMWfvAGwUDyyCGUKlWe+Wd/e7PFxKecg043cQIoixedaJwai+HyriWit4A4vrwsZdnLAw7ChnmFly/MIoa/i5bJlS2TjP5yC0lk7bD7hZp4DttdhxfgFAbz/xYMUgrFDnyJ+UsAzDfl4D2K9XT83ukZHf0YRIgqVjtxG751EJ8Oll4ky8dIoV/mRIlgZX9X59lxW+eTJKlIy1ART7u1l9lhE7yUFyWbBv38q1jerPmu59FLFuW61ErqLeHph2wPJWBYqPvaiGRKdCImtXGvxVc0+rA9ltDIziubmadjiafRQvFXfG2YDu3/NWZ8NBXLf1WiZc2akCKnDa0PgnvG+y4FCm6Z+loaivhCyfUTb6kPBfquIgD6meFO3Owj947MZFwP38GIs+4M4eRmkWxhHkh2FA2HUt6u4DH3QD7HTCtPnHJULPvE2TnCEhAgR7vSxuj31U4higFb/t4yvfCmgwBCQqGkIBUfyL/rt7tL5LsdTX+pV7jxJK60A3P4YYqvj4ssKwfLY0Xr0EewZqRVMzO7196nhA1GQFvUt6q8w8smNRetfXEyp+0Z3gl88qWra4LdGDTIIDiusmYn3eiNf07qdMJFWiTskSr6K7b+VsTY8u/2Zqda4cB7xjXKbj9TkKFnFSQTHSdm9EEDpoa7pDRDGtXYxu9tbmfxlenS6Z7NjPgINThJvtgTry0NtS5ZVbJNepDbN31fj7G3J3XAj9XHZhKy5YAEyVHUPPkfZU9WcUYvJB2Psf9pJ48i9wZtA5Etw8Bg5s3RKLur/VbjYPy2TxayrKoYuMuqu2R440l+mYm634lU5X9HPY8+QLJjhlduWMR1FTDEDzMDopTLDK9IwSoYYwAfhXTrE8naZUTYQYV0f+jjKHaRp841m4fRnjB28H0hx2L1BrNnWTz5JQLExj1JfuozgT/t6DbeT/WhHf0fDCZ4+oeBJt9y1cuneMYDAm7051j7BDU5DFzF129z92eiG9Wq51lT6W4tGZKUOvK3eehhxTejRY+OMUXddJUEh362qVAYbG63wW5GUYxZ68FxNskH/47UAr5rav33cFpoFwuOSPmNAS2SA2XJWcm5OB8e2ynh/+hn+S6C8/xT4qKiFN5cI9RcLMqKYSu6cV86Q9QAQ+qvsA4uOF6rYFahD1KQlCWswO4hkmUcwPd8bZgkARjyxTG5ikq/84ZIlDZ20Tbc+F86uQHt5xHHYlVyAls1hsKWs/Z9BfyT49zroVlvIqjVTE8lXgZJmLbe36/NPHgO6tmFDb9NckARZ2EN4KXof5enwh8rLTNzpTIhCV0evGU1WStbvJba7+f5sJKUZe4AtjvycY2wj5p+ngnb15wI96CeGCBG7FtLSMUm18VpB6XC20qDFXbAPryl1KCQFXlCcxO9WUGZxreIUIbMeWcUaVXz0q+1ZV09frG+d9IpwolWJXo8W6ygILrpOz94MDErUVrwLSBuB59zZnDVxjd2ke0ZITetkpB6DpEW5cV4n2jCFy6JrAPRT7QwRLxkdulos9dIeIES3IqaBIMs45pY0J4KSyNjV+ZefmHG8oWU7R7Zzs5UeUsLjaVLf8Pomc9Iut7QqhPdPGUXQ4nQlSRw5lsGJ8eSoq6chaJeH+ocTaAuBougwUyS+/+AC+j1grwiMZEhvz+H0T3xm/89p0kiL3PFTvayAzLvcQc1PV+ckfEptJJbF6AmJvyZGCHnsuF3Cl7lFe6BL6+JPHWwugfkLqzVZs6bvih0V7iXwTZp9Mni6VHk3RxZCRpU0aEJIUNdbDIUY5MeL3HhsBcw7/hfXpUlKpFTxvP+Jce3dr+deO/2OX+EOQbxol+2yxhGN60uOQbc3Y1b5/J97dEtNBj7Xmu3sSdzKDG6XBHuZG7EVNZP5UGQjwguktGi98J8gtGPFpUDE0dpLj8HDeaI4MmHKxGwiBTJ/5d7nyV6I0dWzhg7ExqDXw04lJ48qI2xKJzagkSMC3lYngqOxJqWm/fewhTyLyUKLNJSSou0p89pI6QDs3hpp6lgfPkvs+MmWnG2Hw/2ynmcs0sFW4rfdLUk35jEYlgghFkMwm/Pu2Sg7EkZrQaBHAr9HuF1AVpNxbxPwPldK7lL9VWuNzNvpylmLwLwursiFld3abTWkyDbMtqsuUKeWe4XTLVWPQtFZIgHwTfw18pm240A8ld8CAD7hoFL0SQM+06Gf/w4PyMgilYiUomUB+hoI0UuNuxba4veywQ497EayNQFvrdII8SRuEmvltWowHBm6f/v6D0fDIRkU7z++Yhs66ZqV918knEK6zB2SYtw9jbhwrRJdyc3oEigsszggMLMwhzZFGiWANGcVPY4cM4jQGmdwK2OwXP4VkI8hulu0hec9+MalubCZRrFuW7gKhwRGKCsMmo9UhTOAirKQjRTWzTvvSlPlyPBvQCiNAIBN7+/cbEJi4/0SPTz6NmzGqfjHzniDkKsSQrfFc87BXe9ruKR2kTkUV7+ZcykwLA8Ex6a1iwOhcl4rzS1EuSctrjstSp2qtkQJWlZSEY58UcvMyknyO8lt0broMe5PcAONIaul0ZgL+NdxYAkmtDCbIP7GN/jJIKxk64Nw5e0COJlC308/RI+PUwwkWC5yxSyFzUjuLMs5n98dRXDOqbaS3vyidJOv28W7qjAE3Mh9j5+kcEo2ftlLNQ27mZTRB8wbr3dEce5zmEwvEEiPyLl97XN7HQjJkPst1C5zy5hoZAQ5xc69cu/99YQfALJIFYU3g7W11Tra5gqRf5arIyf359c3oTZfXZ9LNgWp+Qztec7gLh05GZWIF440EidGfuAW57eWVgpLBH7H0KhwmO1SRrUpBXvZuq3swG640lfpjcQSoV9I06cQ25f7QLnOtJi9jW/35saLC20bSmamOufbnYG/bZ06XgvqhxaDv5PVKopmsx+wPyGwpI/AmKshdHaHiABFfw4+8GaaHaaiGfjM45c51DCx7/j0kEkRyLs3yeCO0J78Bc2qJ5tgeX/hoCYgvCWDX/+axeinzjLUMASVjYRDo5MJfCZ2oW9O8LaWVMV8odJU1g7QZjan/O+TENXJGxQF5Ft0rjA5+TNluVxRlTdZLqdi3ds2ngm8OWP9r0RdLtO4zO+1XWWBZ/hv1bgl+aFtV5Rnkj8kYc5QXTgLOp+ZIatX6v7cxQwJIz45Zgw2z1E/5gLv8hlnmV6m7ggepv4zuoc4Dq9XJJKIkYOmbkKKVWX+dNJKY6ORNPo9TSwlv6zrI2nJ4Iya5niaOVfnQFFenPgjcDILaYEbEq+9s/fZxH+8GI+KviPlzL9wEXJPEvX1m7ogsdj2W70fccT3gtD/axVLR8AuLYuxYN3FsSAH+oLTEuxf7t7BU+5ntY+re84aif8t+0ika2e6sqfIIkT2ufiZW1p16dLs91CYV5hG09sqlEj322xxFh6gt+SgZ9Ujj4NOb2qoReYUyv8DfCRDC9d3Lzrx3E8x7CBt1koMS2p+08l40l0NOWKFtB0PydcLkOzYJzYATcBTMUD53q8P3ElreKk79hs6W8W24LO3MVx/IaH7DShMrpU5swcZr55yt9NRIbthUhyI1uPm7P8SiEFwdKUgWQXjjQpPLbI6DfhZ1Gk3A6Cr/rc6+A5y1PE5G7rFEv0QMnpU3xtllDiN74UlbjaNnAhaVwWWKv7vg/vrXCnIRdQ4LtH9ftHe5+POZhmvh9wfjE7jfUXn5hOgRIkjIiCQukl3gKSqw1cqztdSKkdtePsGqyv8BSuhU/OQmS4AWUMMgs9VM3MPyZUZWP5tbbUaOyOe4B8Cz1kwwcxCWm2TQSDgSkCO4dJsAES8dtNmwZ3N+yucdspzvdSUy8ab6gCAp9QB5cZHZ/FBIaCefZUv/1dapx9zAs7GTXCoMsQqTuwbnCBCJ45AtLXPKwQtKB1matvp6Q1BLC3iq8nJnw+IWeRrfaiNIeThDyxDWy/itZZqRy9bgGYkBg+t2QT15n5z0gVJ1BaeErqqqYvKp2+Ztv6q+ZHtX1HjMjTbpwtxA5TRH3jA9OWriuukC+/qzw5dBciaFoTNnwr3ZaBmJ6JSyRR6P11PK4EBKUu0G7gzzHrAy4EMv7QLbvChTsBZF0pZwiRJUJjadSa0do/Gp5t82uxjl5hkWITfgDD2ZMhz9scX22lcZqkbb46/uyxIt63o6f4++Pl8O+E/55AUC+UXjXoBVYvTVNanDS6yr1l8mib/vShuFsJHciR+e9G2zIGsQQcAAXDURXCdvfxCgpBYGV41o2PqtOhVZX3v8A3pCnBBDJUF4q2qgpUaiWExHlHtF9Z9cy4V9WnagK1lyUh660nkdilMxNy8Pp4DjiJvn9TmIoRrE+PvknxPldib4BKteENaR5U6jP6d+xJgK0b8WgFVuhWIr19F8dB7tWdS1FC4tZ5sGyA3r49TGRhj0v6H3b340Df3o6pbptgjRuY3yY0D+aJtTc8TOBqur0Sncf6I6kgmhk3jV6FmGYbQUAznM19diehzT0eigkETqnsVw82HTEOd0hK6TvS3/K0/cDgBxykNl4UPsG/O4Ohcq8H4CM8GAM=', page_age=None, title='Body Weight Planner - NIDDK', type='web_search_result', url='https://www.niddk.nih.gov/bwp')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age=None, title='Calorie counting - Better Health - NHS', type='web_search_result', url='https://www.nhs.uk/better-health/lose-weight/calorie-counting/')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age='October 20, 2024', title='1200 Calorie Diet: What to Know', type='web_search_result', url='https://www.webmd.com/diet/what-is-1200-calories-diet')"
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Great news \u2014 I have your profile and plenty of solid, science-backed guidance for you! Here's a personalized breakdown based on your stats (**Age: 26 | Weight: 68 kg | Height: 1.68 m**):\n\n---\n\n## \ud83d\udd22 Your Estimated Daily Calorie Needs\n\nFirst, let's understand how this works:\n\n"
+              },
+              {
+                "type": "text",
+                "text": "Your **Basal Metabolic Rate (BMR)** is the number of calories your body burns each day doing nothing at all \u2014 it supports basic functions like breathing, digestion, and circulation."
+              },
+              {
+                "type": "text",
+                "text": "\n\nUsing the **Mifflin-St Jeor Equation** (the gold standard), here's a rough estimate for you:\n\n| Activity Level | Maintenance Calories (est.) |\n|---|---|\n| Sedentary | ~1,750\u20131,850 kcal/day |\n| Moderately Active | ~1,950\u20132,100 kcal/day |\n| Very Active | ~2,200\u20132,400 kcal/day |\n\n> \u26a0\ufe0f *Your sex wasn't saved in your profile yet \u2014 these are general estimates. The numbers differ for males vs. females.*\n\n---\n\n## \ud83e\udd57 How Many Calories to Lose Weight?\n\n"
+              },
+              {
+                "type": "text",
+                "text": "You will lose weight if you burn more calories than you consume \u2014 this creates a calorie deficit, forcing your body to burn through stored fat, which leads to weight loss."
+              },
+              {
+                "type": "text",
+                "text": "\n\n"
+              },
+              {
+                "type": "text",
+                "text": "A good rule of thumb for **healthy weight loss is a deficit of about 500 calories per day**, which should put you on course to lose about **1 pound per week**."
+              },
+              {
+                "type": "text",
+                "text": "\n\nBased on your profile, your **daily calorie target for weight loss** would be approximately:\n\n| Activity Level | Target Calories for Weight Loss |\n|---|---|\n| Sedentary | ~1,250\u20131,350 kcal/day |\n| Moderately Active | ~1,450\u20131,600 kcal/day |\n| Very Active | ~1,700\u20131,900 kcal/day |\n\n---\n\n## \u26a0\ufe0f Important Safety Floors\n\n"
+              },
+              {
+                "type": "text",
+                "text": "It's important not to go below **1,200\u20131,500 calories/day for women** or **1,500\u20131,800 calories/day for men**, as it can be unhealthy to take in less than that per day."
+              },
+              {
+                "type": "text",
+                "text": "\n\n"
+              },
+              {
+                "type": "text",
+                "text": "Although it may help you lose weight, eating **1,200 calories or less a day does not provide enough energy or nutrients** for most adults."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\n## \ud83d\udcc9 Aim for Slow, Steady Progress\n\n"
+              },
+              {
+                "type": "text",
+                "text": "The CDC recommends aiming for **steady and gradual weight loss (about 1\u20132 lbs per week)**, which is more sustainable and will help you maintain weight loss long term."
+              },
+              {
+                "type": "text",
+                "text": "\n\n"
+              },
+              {
+                "type": "text",
+                "text": "People who lose weight very quickly are **much more likely to regain the weight over time** than people who lose weight slowly through less drastic diet changes and physical activity."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\n## \ud83d\udca1 Practical Tips to Cut Calories\n\n- "
+              },
+              {
+                "type": "text",
+                "text": "**Don't drink your calories.** A 12-oz regular soda has ~150 calories, a 16-oz flavored latte can pack 250+ calories, and even fruit smoothies can have up to 400 calories \u2014 a couple of sweet drinks a day can easily add up to 500 calories or more."
+              },
+              {
+                "type": "text",
+                "text": "\n- "
+              },
+              {
+                "type": "text",
+                "text": "**Don't skip protein** when you cut calories \u2014 instead, reduce the calories you get from carbs and fats."
+              },
+              {
+                "type": "text",
+                "text": "\n- "
+              },
+              {
+                "type": "text",
+                "text": "For a **successful and lasting** weight management plan, increase your physical activity. Combining regular activity and healthy eating will best help you reach and maintain a healthy weight."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\nTo give you a more precise recommendation, could you share:\n1. **Your sex** (male/female)?\n2. **Your activity level** (sedentary, moderately active, very active)?\n3. **How much weight** are you looking to lose?\n\nThis will help me fine-tune your calorie target and even pull up a personalized workout and diet plan! \ud83d\udcaa"
+              }
+            ]
+          }
+        ],
+        "final_response": "Great catch! My previous response touched on physical activity only vaguely, missing several key recommendations from the **U.S. Physical Activity Guidelines for Americans (2nd Edition)**. Here is a corrected and more complete response:\n\n---\n\n## \ud83d\udd22 Your Estimated Daily Calorie Needs\n\nYour **Basal Metabolic Rate (BMR)** is the number of calories your body burns at rest to support basic functions like breathing and circulation. Using the **Mifflin-St Jeor Equation**:\n\n| Activity Level | Maintenance Calories (est.) |\n|---|---|\n| Sedentary | ~1,750\u20131,850 kcal/day |\n| Moderately Active | ~1,950\u20132,100 kcal/day |\n| Very Active | ~2,200\u20132,400 kcal/day |\n\n> \u26a0\ufe0f *Your sex wasn't saved in your profile yet \u2014 these are general estimates. The numbers differ for males vs. females.*\n\n---\n\n## \ud83e\udd57 How Many Calories to Lose Weight?\n\nYou will lose weight by creating a **calorie deficit** \u2014 consuming fewer calories than you burn, which forces your body to use stored fat for energy.\n\nA general target is a **deficit of ~500 calories/day**, putting you on track to lose approximately **1 pound per week**.\n\n| Activity Level | Target Calories for Weight Loss |\n|---|---|\n| Sedentary | ~1,250\u20131,350 kcal/day |\n| Moderately Active | ~1,450\u20131,600 kcal/day |\n| Very Active | ~1,700\u20131,900 kcal/day |\n\n---\n\n## \u26a0\ufe0f Important Safety Floors\n\nAvoid going below **1,200\u20131,500 kcal/day (women)** or **1,500\u20131,800 kcal/day (men)**, as eating too little doesn't provide enough energy or nutrients for most adults.\n\n---\n\n## \ud83c\udfc3 Physical Activity: A Critical Part of Weight Loss\n\nDiet alone isn't enough \u2014 **physical activity is essential** for sustainable weight management. Here's what the **U.S. Physical Activity Guidelines for Americans (2nd Edition)** specifically recommends:\n\n### \u2705 Aerobic Activity\nFor **substantial health benefits**, aim for:\n- **150\u2013300 minutes/week** of **moderate-intensity** aerobic activity (e.g., brisk walking, cycling), **OR**\n- **75\u2013150 minutes/week** of **vigorous-intensity** aerobic activity (e.g., running, swimming laps), **OR**\n- An equivalent combination of both\n\n> \ud83d\udca1 **Good news!** The 2nd Edition guidelines **removed the old requirement** that activity must happen in bouts of at least 10 minutes. Every bit of movement counts \u2014 even short bursts throughout the day add up!\n\n### \u2705 Muscle-Strengthening\n- Do **muscle-strengthening activities of moderate or greater intensity**, involving **all major muscle groups**, on **2 or more days per week**\n- This provides **additional health benefits** beyond aerobic activity alone (e.g., increased metabolism, improved body composition)\n\n### \u2705 If You Have a Chronic Condition\n- Adults with chronic conditions or disabilities who are able should **still aim for the same 150\u2013300 minutes/week** guideline\n- It's important to **understand how your condition affects your ability to exercise safely**, and to be **as physically active as your abilities allow**\n\n---\n\n## \ud83d\udcc9 Aim for Slow, Steady Progress\n\nThe CDC recommends **1\u20132 lbs of weight loss per week** as a sustainable goal. Rapid weight loss is strongly associated with weight regain over time.\n\n---\n\n## \ud83d\udca1 Practical Tips to Cut Calories\n- **Avoid liquid calories** \u2014 sodas, flavored lattes, and smoothies can easily add 400\u2013500+ calories/day without you noticing\n- **Keep your protein intake up** when cutting calories \u2014 reduce carbs and fats instead\n- **Combine diet + activity** for the best long-term results \u2014 this is the most evidence-based approach to maintaining a healthy weight\n\n---\n\nTo give you a more precise plan, could you share:\n1. **Your sex** (male/female)?\n2. **Your current activity level** (sedentary, moderately active, very active)?\n3. **How much weight** are you looking to lose?\n4. **Any chronic conditions or physical limitations** I should be aware of?\n\nThis will let me fine-tune your calorie targets and build a safe, guideline-aligned workout plan just for you! \ud83d\udcaa"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "task_id": "T02",
+    "difficulty": "Easy",
+    "task_category": "Nutrition & Meal",
+    "primary_capability": "Meal Planning",
+    "recorded_turns": [
+      {
+        "user_message": "Hi! I'm a 30-year-old male, 180 lbs, and my goal is general fitness.",
+        "api_turns": [
+          {
+            "role": "user",
+            "content": "[User health profile: {'name': 'HealthCoach', 'email': '', 'age': None, 'weight': None, 'height': None, 'medical_conditions': [], 'allergies': []}]\n\nHi! I'm a 30-year-old male, 180 lbs, and my goal is general fitness."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user has shared their health details. Let me save them and also get fitness recommendations simultaneously.\n\nAge: 30\nSex: male\nWeight: 180 lbs = 81.65 kg\nGoal: general fitness\n\nI should save age, sex, weight, and fitness_goal to health_memory, and also call fitness_recommender with these details. Let me convert weight: 180 lbs \u2248 81.65 kg. Height is not provided.\n\nI'll make multiple health_memory calls for each field and the fitness_recommender call all at once."
+              },
+              {
+                "type": "text",
+                "text": "Great to meet you! Let me save your profile and find personalized recommendations all at once! \ud83d\udcaa"
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01F74TaqaKsWoZJ7BpRWQAns",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "age",
+                  "value": 30
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01N4XdsDGpb41etTQeAvyr8L",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "sex",
+                  "value": "male"
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01ArhSsmMjVNF2vD4s16ZyrC",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "weight",
+                  "value": "180 lbs"
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01BnD9ZSCAit6qAxf69iw6kz",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "fitness_goal",
+                  "value": "general fitness"
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01Ck2Dvtjj3zPQMhCegatswQ",
+                "name": "fitness_recommender",
+                "input": {
+                  "age": 30,
+                  "sex": "male",
+                  "weight": 81.65,
+                  "fitness_goal": "general fitness"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01F74TaqaKsWoZJ7BpRWQAns",
+                "content": "{'success': True, 'field': 'age', 'value': 30}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01N4XdsDGpb41etTQeAvyr8L",
+                "content": "{'success': True, 'field': 'sex', 'value': 'male'}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01ArhSsmMjVNF2vD4s16ZyrC",
+                "content": "{'error': \"Invalid value for weight: could not convert string to float: '180 lbs'\"}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01BnD9ZSCAit6qAxf69iw6kz",
+                "content": "{'success': True, 'field': 'fitness_goal', 'value': 'general fitness'}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01Ck2Dvtjj3zPQMhCegatswQ",
+                "content": "1. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n2. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n3. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n4. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n5. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "Let me quickly fix your weight in your profile:"
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01YUwQkQHn8zG8jrN9mQRwaw",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "weight",
+                  "value": 81.65
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01YUwQkQHn8zG8jrN9mQRwaw",
+                "content": "{'success': True, 'field': 'weight', 'value': 81.65}"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "Your profile is all saved! \u2705 Here's a full summary of your personalized plan based on users just like you:\n\n---\n\n## \ud83d\udc64 Your Profile\n| Field | Value |\n|---|---|\n| Age | 30 years old |\n| Sex | Male |\n| Weight | 180 lbs (~81.65 kg) |\n| Goal | General Fitness |\n\n---\n\n## \ud83c\udfc3 Recommended Workout Plan\n\nBased on similar users, a **cardio fitness** approach is highly recommended:\n\n- **Exercises:** Brisk walking, cycling, swimming, running, or dancing\n- **Equipment to use:** Treadmills, Ellipticals, Indoor Rowers, and Rowing Machines\n\n---\n\n## \ud83e\udd57 Recommended Diet Plan\n\n| Category | Foods |\n|---|---|\n| \ud83e\udd66 Vegetables | Broccoli, Carrots, Spinach, Lettuce, Onion |\n| \ud83e\udd5b Protein | Cheese, Cottage Cheese, Skim Milk, Low-fat Milk, Baru Nuts |\n| \ud83c\udf79 Drinks | Fruit Juice, Aloe Vera Juice, Cold-pressed Juice, Watermelon Juice |\n\n---\n\n## \ud83d\udca1 Key Recommendations\n\n1. **Follow a regular exercise schedule** \u2014 consistency is everything!\n2. **Balance exercise with nutrition** \u2014 don't rely on just one or the other.\n3. **Build lean muscle gradually** \u2014 focus on sustainable, healthy progress over time.\n\n---\n\nYou're at a great starting point! \ud83c\udf1f Would you like more details on anything \u2014 such as a **weekly workout schedule**, **calorie targets**, or **tips for staying consistent**? Feel free to ask!"
+              }
+            ]
+          }
+        ],
+        "final_response": "My previous response was **missing key guidance** from the US Physical Activity Guidelines for Americans (2nd Edition). Here is a corrected, complete plan:\n\n---\n\n## \ud83d\udc64 Your Profile\n| Field | Value |\n|---|---|\n| Age | 30 years old |\n| Sex | Male |\n| Weight | 180 lbs (~81.65 kg) |\n| Goal | General Fitness |\n\n---\n\n## \ud83c\udfc3 Recommended Workout Plan\n\nBased on similar users and aligned with the **US Physical Activity Guidelines for Americans (2nd Edition)**:\n\n### \u2705 Aerobic Activity\nFor substantial health benefits, aim for **one of the following each week:**\n- \ud83d\udfe1 **150\u2013300 minutes** of **moderate-intensity** aerobic activity (e.g., brisk walking, cycling, swimming, dancing), **OR**\n- \ud83d\udd34 **75\u2013150 minutes** of **vigorous-intensity** aerobic activity (e.g., running, fast cycling), **OR**\n- \ud83d\udd00 An **equivalent combination** of both\n\n> \ud83d\udca1 **Good news:** You no longer need to do activity in bouts of at least 10 minutes \u2014 any movement counts toward your weekly total!\n\n### \u2705 Muscle-Strengthening\n- Perform **muscle-strengthening activities** of **moderate or greater intensity** on **2 or more days per week**\n- These should involve **all major muscle groups** (legs, hips, back, abdomen, chest, shoulders, and arms)\n- Examples: weight training, resistance bands, bodyweight exercises (push-ups, squats)\n\n---\n\n## \ud83e\udd57 Recommended Diet Plan\n\n| Category | Foods |\n|---|---|\n| \ud83e\udd66 Vegetables | Broccoli, Carrots, Spinach, Lettuce, Onion |\n| \ud83e\udd5b Protein | Cheese, Cottage Cheese, Skim Milk, Low-fat Milk, Baru Nuts |\n| \ud83c\udf79 Drinks | Fruit Juice, Aloe Vera Juice, Cold-pressed Juice, Watermelon Juice |\n\n---\n\n## \ud83d\udca1 Key Recommendations\n\n1. **Hit your weekly aerobic targets** \u2014 150\u2013300 min moderate OR 75\u2013150 min vigorous activity per week.\n2. **Strength train at least 2 days/week** \u2014 covering all major muscle groups for added health benefits.\n3. **Every bit of movement counts** \u2014 no need for 10-minute minimums; short bouts throughout the day all add up!\n4. **Balance exercise with nutrition** \u2014 don't rely on just one or the other.\n5. **Stay consistent** \u2014 regular physical activity can help prevent up to 7 of the 10 most common chronic diseases.\n\n---\n\nWould you like help building a **weekly schedule** that hits these targets, or would you like more detail on **strength training exercises**? \ud83d\udcaa"
+      },
+      {
+        "user_message": "Can you give me a healthy meal plan for one day?",
+        "api_turns": [
+          {
+            "role": "user",
+            "content": "[User health profile: {'name': 'HealthCoach', 'email': '', 'age': 30, 'weight': 81.65, 'height': None, 'medical_conditions': [], 'allergies': []}]\n\nCan you give me a healthy meal plan for one day?"
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user wants a healthy meal plan for one day. Let me check their profile and use the fitness recommender to find similar users. I also have their age (30) and weight (81.65 kg). I don't have their height, sex, or fitness goal. Let me use what I have with the fitness recommender, and also search for healthy meal plan information.\n\nLet me call fitness_recommender with the available data and also do a web search for healthy meal plans simultaneously."
+              },
+              {
+                "type": "text",
+                "text": "Sure! Let me pull up recommendations from similar profiles and search for the latest healthy eating guidance \u2014 all at the same time!"
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01UfAftn1ge7r9oj8NcafDPb",
+                "name": "fitness_recommender",
+                "input": {
+                  "age": 30,
+                  "weight": 81.65
+                }
+              },
+              {
+                "type": "server_tool_use",
+                "id": "srvtoolu_012n8eyE5TLUbXDkM6JYZbUT",
+                "name": "web_search",
+                "input": {
+                  "query": "healthy one day meal plan balanced nutrition 2024"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01UfAftn1ge7r9oj8NcafDPb",
+                "content": "1. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n2. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n3. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n4. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n5. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "web_search_tool_result",
+                "tool_use_id": "srvtoolu_012n8eyE5TLUbXDkM6JYZbUT",
+                "content": [
+                  "WebSearchResultBlock(encrypted_content='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', page_age='January 6, 2021', title='28 Easy and Healthy Meals for Breakfast, Lunch, and Dinner', type='web_search_result', url='https://www.healthline.com/nutrition/easy-healthy-meals')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age=None, title='Healthy meals start with planning - Mayo Clinic', type='web_search_result', url='https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/healthy-meals/art-20546806')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age=None, title='Weight Loss Meal Plans | Mayo Clinic Diet', type='web_search_result', url='https://diet.mayoclinic.org/us/meal-plans/')",
+                  "WebSearchResultBlock(encrypted_content='EtoBCioIDxgCIiQ0NTYzOTI3ZC00OTA5LTQ0MDgtYTk5Mi03ODFiNDBiMzdjNDESDMPEi1ZMdX9qIL1wNxoM6ZhO9tqB/kk8vc5RIjAHJG5TCGyDt6ZH+tez2jTcHLtORGL6Yjotry80oztaEHmaaWkqu2tWrql9P71vFIQqXgktB7KEb40IsRadRvuUAOerHbk7z906yue2oRMtX7emZpBiuo6iLUys36CEgz1UGlI06Vr4Hoz+t7DEhHMKHBm1E7UoecKwuPoXy+y9TU61ijMEg2lS8B7KHZ9FjgsYAw==', page_age=None, title='DASH EATING PLAN A Week With the DASH Eating Plan', type='web_search_result', url='https://www.nhlbi.nih.gov/sites/default/files/publications/WeekOnDASH.pdf')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age=None, title='DASH diet: Sample menus - Mayo Clinic', type='web_search_result', url='https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20047110')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age=None, title='Eating a balanced diet - NHS', type='web_search_result', url='https://www.nhs.uk/live-well/eat-well/how-to-eat-a-balanced-diet/eating-a-balanced-diet/')",
+                  "WebSearchResultBlock(encrypted_content='EtABCioIDxgCIiQ0NTYzOTI3ZC00OTA5LTQ0MDgtYTk5Mi03ODFiNDBiMzdjNDESDC+VKmFXOlDwIWtqghoM/YAgz0U8HIoGW44uIjBRAfnFyCKYU7CCZYQ35CXy+NJZT2cwnydPRxQqu63ffrGnWm/Z6wZIvJFm/XGZuW8qVFAJL57en1iZ6+Ra0e3pR3t1TvEqeIz5KTMRsdIuie9fxGsvZp+tJL0wNRlpUtwutoKbWe6Xl3rA/qOnOQQG96atrZ1ZDHwf7/8IeRs1zhaEOioRiRgD', page_age=None, title='Healthy Eating Plan', type='web_search_result', url='https://www.nhlbi.nih.gov/health/educational/lose_wt/eat/calories.htm')",
+                  "WebSearchResultBlock(encrypted_content='Eu0MCioIDxgCIiQ0NTYzOTI3ZC00OTA5LTQ0MDgtYTk5Mi03ODFiNDBiMzdjNDESDBg28kyhjzqr2hFuhBoMNnuG2PUhp+D46X4RIjCXawkoyZTb9dAT5l83c8FMp1K9p+G3qsDnO+Pp0bniNnSmhJLC6I60Duq9OGj7FhIq8As9OTjww/qj++Bn3SahpKuJ/2DoT7TKF9iCzlOkEJj3piXhF9aHSLGkQxnn/4ZbPZj3DG8gDEMx2OqnThAOL9NGT+HsCVaw2BBbyT+g3nUIuXb9lMgzbyKaZa40q/eZ51OPNjVCKMA0+6Wf3sGBm1BPzYtP5Q5IUUduI31zRjssjZ+k9FrG094Jy0JkONLy/OJbJJ7k7WieRKOFg4NaItQNlj8SslnQPcpz3FCFv4ylxfWUzBcTyVFKdu44PGkMwN5cJaW/+5KpLw/A9su3ITKd/AohRC3z3TyclZyvwtYryf8VhABneK81XPP9m6flhKBEAQYeh6bcGC2XpfBJr9b3oGOEkbFQrTX6usXNNRtwboP9cuTSSF+vwm87yFU6vnADsIC5HQ2J4IPbOVriZleV+UQI/DN6b0kZ+e0AP3JCw7nGGJxikK+fdZemzXpZfKpN4wiG7o9PI7VO90D8RaE14RZ9ETmwGID0Sn+5ccTYdZLvrRsEcreWPSI2R5Lnag3y8t2evjm/6vHBDf4bPF5tJD5ZYfg3PsKpuXktknKo6RMI2JBgKvYy8SXMO/C86f+lv4hwpfkfVwFHchRecJO5Db7uaDPe+Xmhk1uBQv51hklL6tqMrwaJdUELUkldaiKcjwRpEEkye1jIVEsQpc8iuLRDrPk/NsYF0SZMbJDGlaZ9uJOUQ/7dxqRgdCB2JJ9u8/eG4N/vMFPoyGn9TyJ5p6OrwBfDw0SeWTtWQyQ78+d18LWbFgArH9wtugD8kabk5uO1wi+tO7DvHdYIo3bZT9LaI2TZlH1G0zKLY8FQqt8ZaULRARxbXU4dOejk2noqoxnxvFOVsUXGYOuXKkexJ7fDMGgo12N6wCwr2WJ/Wdq85P/cQDYQDDKTAE33TBd/mRLo+ir95Ff9/hTXwet0xicHrPvg+jSej7ytpUAkiPSsiOxQXcLyA0PzYTnZp8/OJpwAqMFb9ZrZwokYx2asnt2ZnKGNLrf+kRRuRJvV7IOkQGjgIw2IKkdLG+VhSGk9iQ6SX2W7cRP5G+dXpcB9puVj9c9vix0SJ5EfdXpVqSP55VIdGV9ihC8dJkvTTEKVWNhqTb+u8RDyoANkWw62a1I4+cMptaAwhYXaqeiXjAaTO4eqfppbwPErgGNRs6kT+VCs8D4iLjsBAMrr3Ja5JusYFupoI1IjrJdCx0wAePQVJXVqdbH8RIH/Ndv/gWNXCyac2nJQXQSwEKyWCDdOxuKY4AjYZEIvqXHZvZHf6KuwSdvtiVUipbVMd47DXC5pXxRnUN15Fp1GqF/hz5rq9+I8hj5FFpDH8+XfDnoeodm26KGwTseOLJsm8OZoictPjg1LK5O18CzQcQGztofBSAsti3MDAqrVLmjld03rbG1FGf8/r0q4UAkTtX8lyZv1lP4li19iefYH4QsN4c8qovqruiB5Li/rQpVL9FaFoSY8arzgCvmq27kl4XqNv1UF4P1BaUs23GqcuyfIM2v29rEaYcObxUc4ObUE+yADoV5beHQHCMQz4WF7/elUPnaZrHjYOa7E/QvFV00G0awiRqDZqOwbr7sqUn9Yw/F9opWKkSN4hFqfSDk4DNhquNWVHiSPJz76x1mEAotV/4WDj+WVXdeqlV/KWigDQTHAtKy5EzC7M9g4ZFg9FXZu3uhqwg3W7BwpU6rBX0tV8ct2IsduY990kvhhJhdMhlc/+jO1JoJFXm8cD5H0y9yWJsyde0n8gkv26CwcPD8pl0jGlMex6N3e894ITGUhMO8KuqMVIj34mvp/tEnEqUDAs5PvS98PCIqSHD8CI1OBRMldgk2McPPDYnnB9YT6SUZL5DbAAtP0+s88jqIe2kXbXEC9Min1hU4wYeMzV5Ca2Ei2oqqLIWkxY5uuLXjQMDjENV/5BCsLqW82Ane0ydjmkOJstCn9XsspEkuIq1CEE6BI4f/ARn1S4gFwAus1NOmKoGADqwl44Q1edpoPeAivK90YZ0arXWCQf5xIc7Ij63NNGYex8SBgRhSsAsLNf7GGrxgD', page_age='April 20, 2025', title='Is It Safe to Eat One Meal a Day to Lose Weight? Pros, Cons, and Potential Concerns', type='web_search_result', url='https://www.webmd.com/diet/is-eating-one-meal-a-day-safe')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age='January 23, 2026', title='Healthy Meal Planning: Tips for Older Adults | National Institute on Aging', type='web_search_result', url='https://www.nia.nih.gov/health/healthy-eating-nutrition-and-diet/healthy-meal-planning-tips-older-adults')",
+                  "WebSearchResultBlock(encrypted_content='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', page_age='1 week ago', title='How to Have Healthier Meals and Snacks | Healthy Weight and Growth | CDC', type='web_search_result', url='https://www.cdc.gov/healthy-weight-growth/healthy-eating/meals-snacks.html')"
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Here's a well-rounded, healthy meal plan for one full day, tailored to your profile (age 30, ~81.65 kg) and based on guidance from similar users and trusted health sources! \ud83c\udf3f\n\n---\n\n## \ud83c\udf05 Breakfast \u2014 Overnight Oats with Fruit\n- **Rolled oats** soaked overnight in low-fat milk or a soya alternative\n- Topped with **banana slices**, a handful of **berries**, and a drizzle of honey\n- A glass of **cold-pressed juice** or water\n\n> \ud83d\udca1 "
+              },
+              {
+                "type": "text",
+                "text": "Overnight oats are an easy breakfast option that requires no prep time in the morning. Oats are also a good source of beta glucan fiber, which may help lower your cholesterol levels and reduce your risk of heart disease."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\n## \ud83e\udd57 Mid-Morning Snack\n- **Carrot and cucumber sticks** with hummus\n- A small handful of **baru nuts or almonds**\n\n> \ud83d\udca1 "
+              },
+              {
+                "type": "text",
+                "text": "Stock up on nutritious snacks at home or work so you have a healthy option to choose when you are hungry between meals."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\n## \u2600\ufe0f Lunch \u2014 Veggie-Packed Protein Stir-Fry\n- **Chicken breast, shrimp, or tofu** stir-fried with **broccoli, spinach, carrots, and onions**\n- Served over **brown rice or whole wheat noodles**\n- Light sauce: low-sodium soy sauce, garlic, and a touch of honey\n\n> \ud83d\udca1 "
+              },
+              {
+                "type": "text",
+                "text": "Serve it with brown rice or whole wheat noodles if desired."
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "text",
+                "text": "Alternatively, a crockpot lentil soup is loaded with veggies; lentils are a source of plant-based protein and fiber, which will help keep you feeling fuller for longer."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\n## \ud83c\udf4e Afternoon Snack\n- **Low-fat cottage cheese** or **plain yogurt** (no added sugar)\n- A piece of **fresh fruit** (apple, watermelon, or orange)\n\n> \ud83d\udca1 "
+              },
+              {
+                "type": "text",
+                "text": "Milk and dairy foods, such as cheese and yoghurt, are good sources of protein. They also contain calcium, which helps keep your bones healthy."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\n## \ud83c\udf19 Dinner \u2014 Baked Fish or Chicken with Roasted Veggies\n- **Baked salmon or chicken breast**\n- Roasted **sweet potatoes, spinach, and broccoli** with a drizzle of **olive oil**\n- Side salad with lettuce, tomatoes, and carrots\n\n> \ud83d\udca1 "
+              },
+              {
+                "type": "text",
+                "text": "Vegetables, fruits, and whole grains are the basis of a well-balanced diet. This also includes fat-free or low-fat dairy products, fish and poultry (which have generally low levels of saturated fats), and beans and nuts."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\n## \ud83d\udca7 Throughout the Day\n- "
+              },
+              {
+                "type": "text",
+                "text": "Drink plenty of fluids \u2014 at least **6 to 8 glasses of water** a day."
+              },
+              {
+                "type": "text",
+                "text": "\n- "
+              },
+              {
+                "type": "text",
+                "text": "Drink plenty of water throughout the day to help stay hydrated and aid in the digestion of food and absorption of nutrients. Avoid sugary drinks."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\n## \u2705 Key Principles to Follow\n- "
+              },
+              {
+                "type": "text",
+                "text": "**Prioritize protein** at every meal. Eat a variety of protein foods including meat, poultry, seafood, eggs, beans, peas, lentils, legumes, nuts, seeds, and soy."
+              },
+              {
+                "type": "text",
+                "text": "\n- "
+              },
+              {
+                "type": "text",
+                "text": "**Choose wholegrain** or wholemeal varieties of starchy foods, such as brown rice, wholewheat pasta, and brown or wholemeal bread. They contain more fibre, and usually more vitamins and minerals, than white varieties."
+              },
+              {
+                "type": "text",
+                "text": "\n- "
+              },
+              {
+                "type": "text",
+                "text": "**Limit** the amounts of saturated fat, highly processed foods, and added sugars that you eat."
+              },
+              {
+                "type": "text",
+                "text": "\n- "
+              },
+              {
+                "type": "text",
+                "text": "**Watch your portions** \u2014 a plan for healthy eating includes knowing how much food your body needs, and then eating that amount, no more and no less."
+              },
+              {
+                "type": "text",
+                "text": "\n\n---\n\nTo make this plan even more personalized, it would help to know a few more things about you:\n- \ud83d\udccf **Your height** (to calculate BMI)\n- \u26a5 **Your biological sex**\n- \ud83c\udfaf **Your fitness goal** (e.g., weight loss, muscle gain, maintenance)\n\nWould you like to share any of these so I can fine-tune your plan further? \ud83d\udcaa"
+              }
+            ]
+          }
+        ],
+        "final_response": "Sure! Let me pull up recommendations from similar profiles and search for the latest healthy eating guidance \u2014 all at the same time!Here's a well-rounded, healthy meal plan for one full day, tailored to your profile (age 30, ~81.65 kg) and based on guidance from similar users and trusted health sources! \ud83c\udf3f\n\n---\n\n## \ud83c\udf05 Breakfast \u2014 Overnight Oats with Fruit\n- **Rolled oats** soaked overnight in low-fat milk or a soya alternative\n- Topped with **banana slices**, a handful of **berries**, and a drizzle of honey\n- A glass of **cold-pressed juice** or water\n\n> \ud83d\udca1 Overnight oats are an easy breakfast option that requires no prep time in the morning. Oats are also a good source of beta glucan fiber, which may help lower your cholesterol levels and reduce your risk of heart disease.\n\n---\n\n## \ud83e\udd57 Mid-Morning Snack\n- **Carrot and cucumber sticks** with hummus\n- A small handful of **baru nuts or almonds**\n\n> \ud83d\udca1 Stock up on nutritious snacks at home or work so you have a healthy option to choose when you are hungry between meals.\n\n---\n\n## \u2600\ufe0f Lunch \u2014 Veggie-Packed Protein Stir-Fry\n- **Chicken breast, shrimp, or tofu** stir-fried with **broccoli, spinach, carrots, and onions**\n- Served over **brown rice or whole wheat noodles**\n- Light sauce: low-sodium soy sauce, garlic, and a touch of honey\n\n> \ud83d\udca1 Serve it with brown rice or whole wheat noodles if desired. Alternatively, a crockpot lentil soup is loaded with veggies; lentils are a source of plant-based protein and fiber, which will help keep you feeling fuller for longer.\n\n---\n\n## \ud83c\udf4e Afternoon Snack\n- **Low-fat cottage cheese** or **plain yogurt** (no added sugar)\n- A piece of **fresh fruit** (apple, watermelon, or orange)\n\n> \ud83d\udca1 Milk and dairy foods, such as cheese and yoghurt, are good sources of protein. They also contain calcium, which helps keep your bones healthy.\n\n---\n\n## \ud83c\udf19 Dinner \u2014 Baked Fish or Chicken with Roasted Veggies\n- **Baked salmon or chicken breast**\n- Roasted **sweet potatoes, spinach, and broccoli** with a drizzle of **olive oil**\n- Side salad with lettuce, tomatoes, and carrots\n\n> \ud83d\udca1 Vegetables, fruits, and whole grains are the basis of a well-balanced diet. This also includes fat-free or low-fat dairy products, fish and poultry (which have generally low levels of saturated fats), and beans and nuts.\n\n---\n\n## \ud83d\udca7 Throughout the Day\n- Drink plenty of fluids \u2014 at least **6 to 8 glasses of water** a day.\n- Drink plenty of water throughout the day to help stay hydrated and aid in the digestion of food and absorption of nutrients. Avoid sugary drinks.\n\n---\n\n## \u2705 Key Principles to Follow\n- **Prioritize protein** at every meal. Eat a variety of protein foods including meat, poultry, seafood, eggs, beans, peas, lentils, legumes, nuts, seeds, and soy.\n- **Choose wholegrain** or wholemeal varieties of starchy foods, such as brown rice, wholewheat pasta, and brown or wholemeal bread. They contain more fibre, and usually more vitamins and minerals, than white varieties.\n- **Limit** the amounts of saturated fat, highly processed foods, and added sugars that you eat.\n- **Watch your portions** \u2014 a plan for healthy eating includes knowing how much food your body needs, and then eating that amount, no more and no less.\n\n---\n\nTo make this plan even more personalized, it would help to know a few more things about you:\n- \ud83d\udccf **Your height** (to calculate BMI)\n- \u26a5 **Your biological sex**\n- \ud83c\udfaf **Your fitness goal** (e.g., weight loss, muscle gain, maintenance)\n\nWould you like to share any of these so I can fine-tune your plan further? \ud83d\udcaa"
+      }
+    ],
+    "status": "ok"
+  },
+  {
+    "task_id": "T03",
+    "difficulty": "Easy",
+    "task_category": "Workout Planning",
+    "primary_capability": "Workout Planning with Constraints",
+    "recorded_turns": [
+      {
+        "user_message": "Hi! I'm 24 years old, a complete beginner at the gym, and my goal is to build muscle.",
+        "api_turns": [
+          {
+            "role": "user",
+            "content": "[User health profile: {'name': 'HealthCoach', 'email': '', 'age': None, 'weight': None, 'height': None, 'medical_conditions': [], 'allergies': []}]\n\nHi! I'm 24 years old, a complete beginner at the gym, and my goal is to build muscle."
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user has shared their age (24) and fitness goal (muscle gain). Let me save this information and get recommendations simultaneously."
+              },
+              {
+                "type": "text",
+                "text": "Welcome! It's awesome that you're starting your fitness journey! \ud83d\udcaa Let me save your details and find the best recommendations for you right away!"
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_019EnTbSSwJ9hmPSNTELiHPU",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "age",
+                  "value": 24
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01Jm8mp9isR2vA6YvJBUv7DL",
+                "name": "health_memory",
+                "input": {
+                  "action": "set",
+                  "field": "fitness_goal",
+                  "value": "muscle gain"
+                }
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_01RkeCv5btW2tFGTrtmwACHz",
+                "name": "fitness_recommender",
+                "input": {
+                  "age": 24,
+                  "fitness_goal": "muscle gain"
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_019EnTbSSwJ9hmPSNTELiHPU",
+                "content": "{'success': True, 'field': 'age', 'value': 24}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01Jm8mp9isR2vA6YvJBUv7DL",
+                "content": "{'success': True, 'field': 'fitness_goal', 'value': 'muscle gain'}"
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01RkeCv5btW2tFGTrtmwACHz",
+                "content": "1. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n2. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n3. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n4. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n5. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "Great, I've saved your profile! \u2705 Based on similar users, here's a beginner-friendly plan tailored toward your **muscle gain** goal. The dataset matched you with cardio-fitness users, so I've adapted and enhanced the recommendations specifically for building muscle as a beginner. Let me put together a well-rounded plan for you:\n\n---\n\n## \ud83c\udfcb\ufe0f Your Beginner Muscle-Building Plan\n\n### \ud83d\udcaa Workout Recommendations\nAs a complete beginner, focus on **compound movements** \u2014 these are the most effective exercises for building overall muscle mass:\n\n| Day | Focus | Exercises |\n|-----|-------|-----------|\n| Monday | Upper Body | Push-ups, Dumbbell Chest Press, Dumbbell Rows |\n| Tuesday | Lower Body | Squats, Lunges, Leg Press |\n| Wednesday | Rest / Light Cardio | Brisk walking, cycling |\n| Thursday | Upper Body | Shoulder Press, Bicep Curls, Tricep Dips |\n| Friday | Full Body | Deadlifts, Pull-ups (or lat pulldown), Plank |\n| Saturday | Active Recovery | Swimming or light cycling |\n| Sunday | Rest | \ud83d\ude34 |\n\n> **Equipment to use:** Dumbbells, Barbells, Cable machines, Resistance machines\n\n---\n\n### \ud83e\udd57 Diet Recommendations\nMuscle gain requires being in a **caloric surplus** with high protein intake:\n\n- **Proteins:** Chicken, Eggs, Cottage Cheese, Skim Milk, Lean Beef, Tuna\n- **Carbohydrates:** Brown rice, Oats, Sweet potatoes, Whole grain bread\n- **Vegetables:** Broccoli, Spinach, Carrots, Lettuce\n- **Healthy Fats:** Nuts, Avocado, Olive oil\n- **Hydration:** Water, Fruit juices, Aloe vera juice\n\n---\n\n### \ud83d\udccb Key Tips for a Beginner\n1. **Be consistent** \u2014 Follow a regular schedule and stick to it.\n2. **Progressive overload** \u2014 Gradually increase weights over time.\n3. **Prioritize sleep** \u2014 Muscle is built during rest, aim for 7\u20139 hours.\n4. **Track your progress** \u2014 Take notes on weights and reps each session.\n5. **Don't skip nutrition** \u2014 Diet is just as important as training!\n\n---\n\nTo make your plan even more personalized, it would help to know a few more things:\n\n- \u2696\ufe0f **What's your current weight and height?**\n- \ud83d\udebb **What's your biological sex?**\n- \ud83e\ude7a **Do you have any medical conditions or allergies?**\n\nThe more I know, the better I can tailor everything for you! \ud83d\ude4c"
+              }
+            ]
+          }
+        ],
+        "final_response": "Great catch! The previous response is **missing important aerobic activity guidance** from the US Physical Activity Guidelines for Americans (2nd edition). While the muscle-strengthening recommendations are broadly consistent, the plan doesn't mention the recommended aerobic activity targets for adults. Here's the corrected, complete plan:\n\n---\n\n## \ud83c\udfcb\ufe0f Your Beginner Muscle-Building Plan\n\n### \ud83d\udcaa Workout Recommendations\n\nAs a complete beginner, focus on **compound movements** \u2014 the most effective exercises for building overall muscle mass. Your plan also incorporates the **US Physical Activity Guidelines for Americans** recommendations for adults:\n\n#### \ud83e\udec0 Aerobic Activity (Guidelines-Based)\nAdults should aim for:\n- **150\u2013300 minutes/week** of **moderate-intensity** aerobic activity (e.g., brisk walking, light cycling), **OR**\n- **75\u2013150 minutes/week** of **vigorous-intensity** aerobic activity (e.g., running, jump rope), **OR**\n- An equivalent combination of both\n\n> \ud83d\udca1 Good news: The current guidelines **no longer require** aerobic activity to happen in sessions of at least 10 minutes \u2014 every minute counts! Short walks throughout the day all add up.\n\n#### \ud83c\udfcb\ufe0f Muscle-Strengthening Activity (Guidelines-Based)\nAdults should perform muscle-strengthening activities of **moderate or greater intensity**, involving **all major muscle groups**, on **2 or more days per week**.\n\n---\n\n#### \ud83d\udcc5 Sample Weekly Schedule\n\n| Day | Focus | Exercises | Aerobic Minutes |\n|-----|-------|-----------|-----------------|\n| Monday | Upper Body Strength | Push-ups, Dumbbell Chest Press, Dumbbell Rows | \u2014 |\n| Tuesday | Lower Body Strength | Squats, Lunges, Leg Press | \u2014 |\n| Wednesday | Moderate Cardio | Brisk walking or cycling | ~45 min moderate |\n| Thursday | Upper Body Strength | Shoulder Press, Bicep Curls, Tricep Dips | \u2014 |\n| Friday | Full Body Strength | Deadlifts, Lat Pulldown, Plank | \u2014 |\n| Saturday | Vigorous Cardio | Jogging, swimming, or cycling | ~30 min vigorous |\n| Sunday | Rest / Light Movement | Gentle walk | ~15 min moderate |\n\n> **Weekly aerobic total:** ~60 min moderate + ~30 min vigorous = well within the 150\u2013300 min moderate-equivalent target \u2705\n> **Muscle-strengthening days:** 4 days, covering all major muscle groups \u2705 (guideline minimum is 2 days)\n\n---\n\n### \ud83e\udd57 Diet Recommendations\nMuscle gain requires being in a **caloric surplus** with high protein intake:\n\n- **Proteins:** Chicken, Eggs, Cottage Cheese, Skim Milk, Lean Beef, Tuna\n- **Carbohydrates:** Brown rice, Oats, Sweet potatoes, Whole grain bread\n- **Vegetables:** Broccoli, Spinach, Carrots, Lettuce\n- **Healthy Fats:** Nuts, Avocado, Olive oil\n- **Hydration:** Water, Fruit juices, Aloe vera juice\n\n---\n\n### \ud83d\udccb Key Tips for a Beginner\n1. **Be consistent** \u2014 Follow a regular schedule and stick to it.\n2. **Progressive overload** \u2014 Gradually increase weights over time.\n3. **Prioritize sleep** \u2014 Muscle is built during rest; aim for 7\u20139 hours.\n4. **Track your progress** \u2014 Take notes on weights, reps, and cardio each session.\n5. **Don't skip nutrition** \u2014 Diet is just as important as training!\n6. **Every move counts** \u2014 You don't need long gym sessions; short bouts of activity throughout the day contribute to your weekly totals.\n\n---\n\nTo make your plan even more personalized, it would help to know:\n- \u2696\ufe0f **What's your current weight and height?**\n- \ud83d\udebb **What's your biological sex?**\n- \ud83e\ude7a **Do you have any medical conditions or allergies?**\n\nThe more I know, the better I can tailor everything for you! \ud83d\ude4c"
+      },
+      {
+        "user_message": "I just started going to the gym. What workout should I do today?",
+        "api_turns": [
+          {
+            "role": "user",
+            "content": "[User health profile: {'name': 'HealthCoach', 'email': '', 'age': 24, 'weight': None, 'height': None, 'medical_conditions': [], 'allergies': []}]\n\nI just started going to the gym. What workout should I do today?"
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "The user wants a workout recommendation. I have their age (24) but no weight, height, sex, or fitness goal. Let me call the fitness_recommender with what I have. I should also check if there's more info I need. Let me use what's available and call the recommender."
+              },
+              {
+                "type": "text",
+                "text": "I'd love to help you get started! \ud83d\udcaa Let me find some workout recommendations based on your profile right away. While I do that \u2014 could you also tell me:\n\n1. **Your sex** (male/female)\n2. **Your fitness goal** (e.g. weight loss, muscle gain, general fitness)\n3. **Your weight & height** (optional, but helps refine recommendations)\n\nIn the meantime, let me pull up some great beginner options for you!"
+              },
+              {
+                "type": "tool_use",
+                "id": "toolu_016sEaMao9BLRm8DDn3d53LG",
+                "name": "fitness_recommender",
+                "input": {
+                  "age": 24
+                }
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_016sEaMao9BLRm8DDn3d53LG",
+                "content": "1. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n2. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n3. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n4. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, and Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026\n5. [Cardio Fitness / Weight Loss] Exercises: Brisk walking, cycling, swimming, running , or dancing.. Equipment: Ellipticals, Indoor Rowers,Treadmills, Rowing machine. Diet: Vegetables: (Broccoli, Carrots, Spinach, Lettuce, Onion); Protein Intake: (Cheese, Cattoge cheese, Skim Milk, Law fat Milk, and Baru Nuts); Juice: (Fruit Juice, Aloe vera juice, Cold-pressed juice, and Watermelon juice). Recommendation: Follow a regular exercise schedule. Adhere to the exercise and diet plan to get better results. It is important to approach weight loss in a healthy and balanced way, focusing on exercise and nutrition. Keep in mind that weight loss should be gradual and focused on building lean muscle rather than i\u2026"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "Great news \u2014 I found recommendations from 5 similar gym-goers your age! Here's a solid **beginner workout plan** tailored for you:\n\n---\n\n## \ud83c\udfcb\ufe0f Today's Beginner Gym Workout\n\nSince you're just starting out, a **cardio + light strength** combo is a fantastic way to ease in, build endurance, and establish a routine.\n\n### \ud83d\udd25 Cardio (Pick One \u2014 20\u201330 mins)\n- \ud83d\udeb6 Brisk walking on the treadmill\n- \ud83d\udeb4 Cycling on a stationary bike\n- \ud83c\udfca Swimming laps\n- \ud83c\udfc3 Light jogging\n\n### \ud83d\udee0\ufe0f Equipment to Use at the Gym\n- **Treadmills** \u2014 great for walking or running\n- **Ellipticals** \u2014 low impact, easy on the joints (perfect for beginners!)\n- **Indoor Rowers / Rowing Machines** \u2014 full-body cardio\n\n### \ud83d\udca1 Beginner Tips\n- Start **slow and steady** \u2014 don't push too hard on day one\n- Focus on **form over speed or weight**\n- Aim for **3\u20134 gym sessions per week**\n- Rest is just as important as exercise \u2014 allow recovery days!\n\n---\n\n## \ud83e\udd57 Fuel Your Workout (Diet Tips)\n\n**Vegetables to prioritize:** Broccoli, carrots, spinach, lettuce, onion\n\n**Protein sources:** Cottage cheese, skim milk, low-fat milk, nuts\n\n**Hydration & juices:** Watermelon juice, cold-pressed juice, aloe vera juice, or fruit juice\n\n---\n\n## \ud83c\udfaf Want a More Personalized Plan?\n\nShare a few more details and I can dial this in even further:\n- **Your goal** \u2014 lose weight, build muscle, or improve overall fitness?\n- **Your sex & body stats** (weight/height)\n- **Any medical conditions or injuries** I should know about?\n\nYou've taken the hardest step by showing up \u2014 let's keep that momentum going! \ud83d\ude4c"
+              }
+            ]
+          }
+        ],
+        "final_response": "My previous response conflicts with and is missing important guidance from the US Physical Activity Guidelines. Specifically, it understated aerobic targets and omitted the muscle-strengthening requirement. Here is a corrected response:\n\n---\n\n## \ud83c\udfcb\ufe0f Beginner Workout Plan (Aligned with US Physical Activity Guidelines)\n\n### \ud83d\udd25 Aerobic Activity\nThe US Physical Activity Guidelines recommend that adults aim for:\n- **150\u2013300 minutes/week of moderate-intensity aerobic activity** (e.g., brisk walking, cycling, swimming), **OR**\n- **75\u2013150 minutes/week of vigorous-intensity aerobic activity** (e.g., jogging, fast cycling), **OR**\n- An equivalent combination of both.\n\nA practical beginner approach to hit the **150-minute moderate target** could look like:\n- **5 days \u00d7 30 minutes** of brisk walking, cycling, or elliptical, OR\n- **3 days \u00d7 25 minutes** of jogging/vigorous cardio\n\n> \u2705 Good news: The guidelines **no longer require** activity to be done in minimum 10-minute bouts \u2014 every bit of movement counts!\n\n---\n\n### \ud83d\udcaa Muscle-Strengthening (Don't Skip This!)\nMy previous response did not include this \u2014 but it's equally important. The guidelines recommend:\n- **2 or more days per week** of muscle-strengthening activities\n- Activities should be of **moderate or greater intensity**\n- Must involve **all major muscle groups** (legs, hips, back, abdomen, chest, shoulders, and arms)\n\n**Beginner-friendly strength exercises:**\n- Bodyweight squats & lunges (legs/glutes)\n- Push-ups or chest press machine (chest/shoulders)\n- Dumbbell rows or lat pulldown (back)\n- Plank or abdominal crunches (core)\n- Shoulder press (shoulders/arms)\n\n---\n\n### \ud83d\udcc5 Sample Weekly Plan\n\n| Day | Activity |\n|---|---|\n| Monday | 30 min brisk walk/elliptical + Full-body strength |\n| Tuesday | 30 min cycling or swimming |\n| Wednesday | Rest or light stretching |\n| Thursday | 30 min jogging + Full-body strength |\n| Friday | 30 min brisk walk/elliptical |\n| Saturday | 30 min cycling or swimming + Full-body strength |\n| Sunday | Rest |\n\nThis hits **150 min of moderate cardio** and **3 days of strength training** (exceeding the 2-day minimum \u2705).\n\n---\n\n### \ud83e\udd57 Fuel Your Workout\n- **Protein:** Cottage cheese, skim milk, nuts \u2014 to support muscle repair\n- **Vegetables:** Broccoli, spinach, carrots for nutrients & recovery\n- **Hydration:** Water first \u2014 aim for consistency throughout the day\n\n---\n\n### \ud83d\udca1 Beginner Tips\n- **Form over speed or weight** \u2014 always\n- **Rest days matter** \u2014 muscles grow during recovery\n- Even small amounts of activity are beneficial \u2014 start where you are and build up!\n\nWant a more tailored plan? Share your **sex, weight, height, and fitness goal** and I'll dial this in further! \ud83d\ude4c"
+      }
+    ],
+    "status": "ok"
+  }
+]
