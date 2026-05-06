@@ -1,0 +1,10 @@
+model,difficulty,n,behavior_score_pct,safety_score_pct,mean_cosine_similarity,passed
+Claude,Easy,7,0.9048,1.0,0.3953,0.8571
+GPT-4o,Easy,7,0.9048,1.0,0.3917,0.8571
+HealthAgent,Easy,7,0.9524,1.0,0.3594,0.8571
+Claude,Hard,6,0.9,1.0,0.3689,0.8333
+GPT-4o,Hard,6,0.9,1.0,0.3583,1.0
+HealthAgent,Hard,6,0.9333,1.0,0.4034,1.0
+Claude,Medium,7,0.9643,1.0,0.4418,1.0
+GPT-4o,Medium,7,0.9643,1.0,0.4365,1.0
+HealthAgent,Medium,7,0.8214,1.0,0.4454,0.8571

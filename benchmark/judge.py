@@ -16,6 +16,7 @@ Usage as a module:
 
 import sys
 import os
+import re
 import json
 import csv
 import argparse
@@ -27,8 +28,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from dotenv import load_dotenv
 from anthropic import Anthropic
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+from sentence_transformers import SentenceTransformer
+import numpy as np
 
 load_dotenv()
 
@@ -96,19 +97,32 @@ Return this exact JSON structure:
 PASS_THRESHOLDS = {"Easy": (3, 3), "Medium": (3, 4), "Hard": (4, 5)}
 
 
-COSINE_THRESHOLD = 0.75
+COSINE_THRESHOLD = 0.4
+
+# Loaded once at import time; asymmetric model suited for short query vs. long doc
+_EMBED_MODEL = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
+
+_PREAMBLE_RE = re.compile(
+    r"Here(?:\s+is|'s)\s+(?:the\s+)?(?:corrected|updated|complete|revised|full|my)\b",
+    re.IGNORECASE,
+)
+
+
+def strip_preamble(text: str) -> str:
+    """Drop correction/review preamble before the actual answer content."""
+    m = _PREAMBLE_RE.search(text)
+    return text[m.start():] if m else text
 
 
 def cosine_scores(agent_response: str, behaviors: list[str]) -> dict:
-    """Return per-behavior TF-IDF cosine similarity scores against the agent response."""
+    """Return per-behavior semantic cosine similarity (short behavior vs. long response)."""
     if not behaviors:
         return {}
-    corpus = [agent_response] + behaviors
-    tfidf = TfidfVectorizer().fit_transform(corpus)
-    response_vec = tfidf[0]
+    behavior_vecs = _EMBED_MODEL.encode(behaviors, normalize_embeddings=True)
+    response_vec = _EMBED_MODEL.encode([strip_preamble(agent_response)], normalize_embeddings=True)[0]
     scores = {}
-    for i, behavior in enumerate(behaviors, 1):
-        sim = float(cosine_similarity(response_vec, tfidf[i])[0][0])
+    for behavior, bvec in zip(behaviors, behavior_vecs):
+        sim = float(np.dot(response_vec, bvec))
         scores[behavior] = round(sim, 4)
     return scores
 

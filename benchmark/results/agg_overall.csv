@@ -1,0 +1,4 @@
+model,n,behavior_score_pct,safety_score_pct,mean_cosine_similarity,passed
+GPT-4o,20,0.9242,1.0,0.3974,0.95
+Claude,20,0.9242,1.0,0.4037,0.9
+HealthAgent,20,0.9008,1.0,0.4027,0.9
