@@ -16,7 +16,13 @@ class OrchestrateAgent:
 
     def run(self, observation):
         context = self._agent_context(observation)
-        messages = [{"role": "user", "content": context}]
+
+        # Rebuild full conversation history so context persists across turns
+        messages = []
+        for entry in self.agent.conversation.get_history():
+            role = "user" if entry["sender"] == "user" else "assistant"
+            messages.append({"role": role, "content": entry["message"]})
+        messages.append({"role": "user", "content": context})
 
         thinking = ""
         response = ""
@@ -50,7 +56,7 @@ class OrchestrateAgent:
             citations = result["citations"] or citations
 
         if self.verifier:
-            response = self._verify_against_guidelines(response)
+            response = self._verify_against_guidelines(response, messages)
 
         # Now print the verified final response
         print(response, flush=True)
@@ -97,13 +103,15 @@ class OrchestrateAgent:
             "fitness_goal": getattr(ui, "fitness_goal", None),
         }
 
-    def _verify_against_guidelines(self, response: str) -> str:
+    def _verify_against_guidelines(self, response: str, messages: list) -> str:
         profile = self._user_profile_dict()
         prompt = self.verifier.build_verification_prompt(response, profile)
         if not prompt:
             return response
         print("\n [Guidelines check running…]", flush=True)
-        result = self.caller.call([{"role": "user", "content": prompt}], silent=True)
+        # Include full conversation so the verifier has context for its rewrite
+        verify_messages = list(messages) + [{"role": "user", "content": prompt}]
+        result = self.caller.call(verify_messages, silent=True)
         revised = result["text"]
         if revised.strip().upper().startswith(GUIDELINES_OK):
             return response
