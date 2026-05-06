@@ -10,6 +10,7 @@ The benchmark consists of **20 tasks** designed to test an AI agent's ability to
 - a scenario description
 - user prompt(s)
 - expected behaviors that define successful task completion
+
 Evaluators compare the agent's response against the expected behaviors for each task and assign scores accordingly.
  
 Task information may be provided through the user profile, the scenario description, or prior conversation context. This design reflects realistic interactions with health assistants where relevant information may be distributed across user profiles and dialogue history.
